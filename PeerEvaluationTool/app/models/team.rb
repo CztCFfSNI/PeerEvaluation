@@ -1,4 +1,5 @@
 class Team < ApplicationRecord
-    has_many :students
+    has_many :student_teams
+    has_many :students, through: :student_teams
     has_many :projects
 end
