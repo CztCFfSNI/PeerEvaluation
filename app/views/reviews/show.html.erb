@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Projectno:</strong>
+  <%= @review.projectno %>
+</p>
+
+<p>
+  <strong>Studentid:</strong>
+  <%= @review.studentid %>
+</p>
+
+<p>
+  <strong>Personalscore:</strong>
+  <%= @review.personalscore %>
+</p>
+
+<p>
+  <strong>Workscore:</strong>
+  <%= @review.workscore %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @review.comment %>
+</p>
+
+<%= link_to 'Edit', edit_review_path(@review) %> |
+<%= link_to 'Back', reviews_path %>
