@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_18_014554) do
+ActiveRecord::Schema.define(version: 2022_04_18_190233) do
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
@@ -20,13 +20,17 @@ ActiveRecord::Schema.define(version: 2022_04_18_014554) do
   end
 
   create_table "reviews", force: :cascade do |t|
-    t.integer "projectno"
-    t.integer "studentid"
     t.integer "personalscore"
     t.integer "workscore"
     t.string "comment"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "written_by_id"
+    t.integer "written_for_id"
+    t.integer "project_id"
+    t.index ["project_id"], name: "index_reviews_on_project_id"
+    t.index ["written_by_id"], name: "index_reviews_on_written_by_id"
+    t.index ["written_for_id"], name: "index_reviews_on_written_for_id"
   end
 
   create_table "student_teams", force: :cascade do |t|
@@ -64,6 +68,9 @@ ActiveRecord::Schema.define(version: 2022_04_18_014554) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "reviews", "projects"
+  add_foreign_key "reviews", "students", column: "written_by_id"
+  add_foreign_key "reviews", "students", column: "written_for_id"
   add_foreign_key "student_teams", "students"
   add_foreign_key "student_teams", "teams"
 end
