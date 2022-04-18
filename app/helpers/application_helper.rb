@@ -7,4 +7,8 @@ module ApplicationHelper
           "#{base_title} | #{page_title}"
         end
        end
+
+       def root_path?
+        request.path == "/" ? true : false
+      end
 end
