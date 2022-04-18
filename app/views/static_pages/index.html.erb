@@ -3,7 +3,7 @@
 <h2>
 
 </h2>
-<% if current_user && current_user.students? %>
+<% if current_user && current_user.admin? %>
     <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
     <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
     <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
