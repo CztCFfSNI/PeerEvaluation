@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   resources :students
   resources :static_pages
   root 'static_pages#index'
+  get '/:controller/:action', to: 'application'
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

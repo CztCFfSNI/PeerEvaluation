@@ -3,8 +3,13 @@
 <h2>
 
 </h2>
-<%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
-<%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
-<%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
-<%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% if current_user && current_user.students? %>
+    <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% else %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% end %>
+<%= current_user.role %>
 </div>

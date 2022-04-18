@@ -21,6 +21,9 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <%= f.label :role %>
+  <%= f.select :role, [User.roles.keys[0], User.roles.keys[1]]  %>
+
   <div class="actions">
     <%= f.submit "Sign up" %>
   </div>

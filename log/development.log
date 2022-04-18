@@ -7208,3 +7208,2909 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 61ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 9806)
 
 
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:25 -0400
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.4ms | Allocations: 1232)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 55.8ms | Allocations: 7701)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.8ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 447)
+  Rendered layouts/_footer.html.erb (Duration: 2.3ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 315.9ms | Allocations: 29092)
+Completed 200 OK in 373ms (Views: 337.2ms | ActiveRecord: 1.2ms | Allocations: 39250)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:27 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 419)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:27 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 156)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1117)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 133)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 9224)
+Completed 200 OK in 47ms (Views: 44.8ms | ActiveRecord: 0.0ms | Allocations: 9973)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:28 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 251)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:28 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 9039)
+Completed 200 OK in 22ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 9736)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:06:30 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/static_pages
+Completed 302 Found in 373ms (ActiveRecord: 1.8ms | Allocations: 5916)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:30 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 370)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 187)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 8645)
+Completed 200 OK in 39ms (Views: 28.2ms | ActiveRecord: 0.8ms | Allocations: 11169)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:06:32 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms | Allocations: 2965)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:06:32 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:32 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 156)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 9221)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 0.0ms | Allocations: 9957)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:33 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 253)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:33 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 9047)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.0ms | Allocations: 9734)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:34 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 249)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:34 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 9048)
+Completed 200 OK in 31ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 9735)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:06:36 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/static_pages
+Completed 302 Found in 384ms (ActiveRecord: 0.4ms | Allocations: 2532)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:36 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 149)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 73)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 8079)
+Completed 200 OK in 40ms (Views: 30.5ms | ActiveRecord: 0.3ms | Allocations: 9624)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:38 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 8064)
+Completed 200 OK in 28ms (Views: 23.2ms | ActiveRecord: 0.3ms | Allocations: 9613)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:39 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 26.0ms | Allocations: 8064)
+Completed 200 OK in 32ms (Views: 27.1ms | ActiveRecord: 0.2ms | Allocations: 9613)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:43 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 8064)
+Completed 200 OK in 30ms (Views: 26.6ms | ActiveRecord: 0.2ms | Allocations: 9613)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:06:44 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.3ms | Allocations: 1785)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:06:44 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 245)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:44 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 9053)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.0ms | Allocations: 9734)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:45 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 249)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:45 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1059)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 9051)
+Completed 200 OK in 29ms (Views: 26.1ms | ActiveRecord: 0.0ms | Allocations: 9829)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:46 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 249)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:46 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 22.9ms | Allocations: 9037)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.0ms | Allocations: 9725)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:06:48 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/static_pages
+Completed 302 Found in 350ms (ActiveRecord: 0.2ms | Allocations: 2354)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:48 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 8070)
+Completed 200 OK in 37ms (Views: 29.6ms | ActiveRecord: 0.2ms | Allocations: 9614)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:06:50 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms | Allocations: 1771)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:06:50 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 245)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:50 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 21.7ms | Allocations: 9043)
+Completed 200 OK in 24ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 9724)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:06:51 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 249)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:06:51 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 9038)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 9724)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:15:53 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/static_pages
+Completed 302 Found in 327ms (ActiveRecord: 8.8ms | Allocations: 3429)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:15:54 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 56.5ms | Allocations: 8082)
+Completed 200 OK in 62ms (Views: 57.2ms | ActiveRecord: 0.3ms | Allocations: 9648)
+
+
+Started GET "/reviews" for ::1 at 2022-04-17 23:15:56 -0400
+Processing by ReviewsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.5ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:18
+  Rendered reviews/index.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1294)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 159)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 31.7ms | Allocations: 9485)
+Completed 200 OK in 70ms (Views: 39.2ms | ActiveRecord: 0.7ms | Allocations: 13186)
+
+
+Started GET "/reviews/new" for ::1 at 2022-04-17 23:15:59 -0400
+Processing by ReviewsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 7.4ms | Allocations: 2358)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 11.4ms | Allocations: 2885)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 146)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 73)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 11008)
+Completed 200 OK in 50ms (Views: 30.0ms | ActiveRecord: 1.3ms | Allocations: 17190)
+
+
+Started GET "/reviews" for ::1 at 2022-04-17 23:18:33 -0400
+Processing by ReviewsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:18
+  Rendered reviews/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 726)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 62.2ms | Allocations: 9285)
+Completed 200 OK in 68ms (Views: 63.0ms | ActiveRecord: 0.4ms | Allocations: 11044)
+
+
+Started GET "/reviews/new" for ::1 at 2022-04-17 23:18:34 -0400
+Processing by ReviewsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 10.4ms | Allocations: 1294)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1406)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 9931)
+Completed 200 OK in 43ms (Views: 36.8ms | ActiveRecord: 0.2ms | Allocations: 11501)
+
+
+Started GET "/reviews" for ::1 at 2022-04-17 23:18:36 -0400
+Processing by ReviewsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:18
+  Rendered reviews/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 54.9ms | Allocations: 9260)
+Completed 200 OK in 62ms (Views: 56.3ms | ActiveRecord: 0.6ms | Allocations: 10819)
+
+
+Started GET "/reviews/new" for ::1 at 2022-04-17 23:18:38 -0400
+Processing by ReviewsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 8.8ms | Allocations: 1278)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 9923)
+Completed 200 OK in 45ms (Views: 38.4ms | ActiveRecord: 0.3ms | Allocations: 11490)
+
+
+Started GET "/reviews" for ::1 at 2022-04-17 23:18:39 -0400
+Processing by ReviewsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:18
+  Rendered reviews/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 48.4ms | Allocations: 9240)
+Completed 200 OK in 60ms (Views: 52.1ms | ActiveRecord: 0.4ms | Allocations: 10798)
+
+
+Started GET "/reviews/new" for ::1 at 2022-04-17 23:18:41 -0400
+Processing by ReviewsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 12.3ms | Allocations: 1278)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 1390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 54.5ms | Allocations: 9914)
+Completed 200 OK in 62ms (Views: 55.5ms | ActiveRecord: 0.3ms | Allocations: 11478)
+
+
+Started GET "/reviews" for ::1 at 2022-04-17 23:18:42 -0400
+Processing by ReviewsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.2ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:18
+  Rendered reviews/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 717)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 9252)
+Completed 200 OK in 54ms (Views: 42.6ms | ActiveRecord: 0.5ms | Allocations: 10810)
+
+
+Started GET "/reviews/new" for ::1 at 2022-04-17 23:18:44 -0400
+Processing by ReviewsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 7.3ms | Allocations: 1278)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 1390)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 9909)
+Completed 200 OK in 61ms (Views: 51.9ms | ActiveRecord: 0.2ms | Allocations: 11473)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:18:49 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 8634)
+Completed 200 OK in 54ms (Views: 47.3ms | ActiveRecord: 0.2ms | Allocations: 10177)
+
+
+Started GET "/projects" for ::1 at 2022-04-17 23:18:50 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 3839)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 156)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 12040)
+Completed 200 OK in 43ms (Views: 32.7ms | ActiveRecord: 2.4ms | Allocations: 15095)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:25:10 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 78ms (ActiveRecord: 2.7ms | Allocations: 3009)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:25:10 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 258)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:25:10 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 1094)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 91.7ms | Allocations: 9075)
+Completed 200 OK in 104ms (Views: 95.2ms | ActiveRecord: 0.0ms | Allocations: 9784)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-17 23:25:17 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 11.2ms | Allocations: 357)
+  Rendered devise/shared/_links.html.erb (Duration: 6.3ms | Allocations: 156)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 32.9ms | Allocations: 2249)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 90.6ms | Allocations: 10429)
+Completed 200 OK in 107ms (Views: 99.3ms | ActiveRecord: 0.0ms | Allocations: 12562)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:25:19 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1091)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.3ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 49.6ms | Allocations: 9618)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.0ms | Allocations: 10384)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:36:09 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 7ms (ActiveRecord: 0.0ms | Allocations: 1083)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:36:09 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 194)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1296)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 166)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 39.9ms | Allocations: 9496)
+Completed 200 OK in 54ms (Views: 41.9ms | ActiveRecord: 0.0ms | Allocations: 14597)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:36:10 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/static_pages
+Completed 302 Found in 482ms (ActiveRecord: 2.1ms | Allocations: 2908)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:36:11 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 162)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 184)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 50.4ms | Allocations: 8420)
+Completed 200 OK in 58ms (Views: 53.1ms | ActiveRecord: 0.3ms | Allocations: 10237)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-17 23:36:14 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 8064)
+Completed 200 OK in 35ms (Views: 28.3ms | ActiveRecord: 0.2ms | Allocations: 9798)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:36:15 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.2ms | Allocations: 2076)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:36:15 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:36:15 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1095)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 9076)
+Completed 200 OK in 51ms (Views: 48.3ms | ActiveRecord: 0.0ms | Allocations: 9773)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:38:03 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.2ms | Allocations: 552)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.8ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 397)
+  Rendered layouts/_footer.html.erb (Duration: 2.7ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 11338)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.0ms | Allocations: 13347)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:38:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1056)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 9049)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.0ms | Allocations: 9817)
+
+
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-04-17 23:38:56 -0400
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 36ms (ActiveRecord: 0.0ms | Allocations: 2505)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:38:56 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 703)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 32.0ms | Allocations: 3784)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.9ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 420)
+  Rendered layouts/_footer.html.erb (Duration: 2.2ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 413.9ms | Allocations: 24663)
+Completed 200 OK in 454ms (Views: 430.1ms | ActiveRecord: 0.9ms | Allocations: 32347)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:38:57 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1070)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 9054)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.0ms | Allocations: 9850)
+
+
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:43:37 -0400
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.5ms | Allocations: 713)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 50.6ms | Allocations: 5778)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.7ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 448)
+  Rendered layouts/_footer.html.erb (Duration: 3.0ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 602.4ms | Allocations: 26698)
+Completed 200 OK in 687ms (Views: 635.1ms | ActiveRecord: 0.7ms | Allocations: 36097)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:43:40 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 158)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 1171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 138)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 9283)
+Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.0ms | Allocations: 10144)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:44:07 -0400
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.8ms | Allocations: 713)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 54.1ms | Allocations: 5778)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.6ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 3.4ms | Allocations: 448)
+  Rendered layouts/_footer.html.erb (Duration: 5.4ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 226.9ms | Allocations: 26698)
+Completed 200 OK in 300ms (Views: 253.7ms | ActiveRecord: 1.9ms | Allocations: 36101)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:44:08 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 580)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 156)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1127)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 117)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 63)
+  Rendered layout layouts/application.html.erb (Duration: 63.5ms | Allocations: 9234)
+Completed 200 OK in 72ms (Views: 69.4ms | ActiveRecord: 0.0ms | Allocations: 9950)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:44:10 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 402ms (ActiveRecord: 2.7ms | Allocations: 5868)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:44:10 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 370)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 1.5ms | Allocations: 187)
+  Rendered layouts/_footer.html.erb (Duration: 1.3ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 8953)
+Completed 200 OK in 56ms (Views: 44.4ms | ActiveRecord: 0.3ms | Allocations: 11574)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:44:13 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.2ms | Allocations: 2997)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:44:13 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 297)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:44:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 156)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1122)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 2.3ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 43.4ms | Allocations: 9221)
+Completed 200 OK in 49ms (Views: 46.5ms | ActiveRecord: 0.0ms | Allocations: 9967)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:44:53 -0400
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.8ms | Allocations: 713)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 76.8ms | Allocations: 5775)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.1ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 4.8ms | Allocations: 448)
+  Rendered layouts/_footer.html.erb (Duration: 2.3ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 584.0ms | Allocations: 26701)
+Completed 200 OK in 686ms (Views: 620.3ms | ActiveRecord: 5.6ms | Allocations: 36979)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-17 23:44:56 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.6ms | Allocations: 227)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 188)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 21.9ms | Allocations: 2836)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 79.0ms | Allocations: 11034)
+Completed 200 OK in 91ms (Views: 87.6ms | ActiveRecord: 0.0ms | Allocations: 13330)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:45:01 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 56.7ms | Allocations: 9678)
+Completed 200 OK in 62ms (Views: 57.8ms | ActiveRecord: 0.0ms | Allocations: 10488)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-17 23:45:07 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 43)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 105)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1335)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 9886)
+Completed 200 OK in 57ms (Views: 55.1ms | ActiveRecord: 0.0ms | Allocations: 10547)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:46:22 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 568)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.5ms | Allocations: 128)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 411)
+  Rendered layouts/_footer.html.erb (Duration: 3.1ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 73.9ms | Allocations: 11438)
+Completed 200 OK in 100ms (Views: 81.4ms | ActiveRecord: 1.5ms | Allocations: 19166)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-17 23:46:23 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 8.9ms | Allocations: 228)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 127)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 22.5ms | Allocations: 2232)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 78.0ms | Allocations: 11153)
+Completed 200 OK in 90ms (Views: 88.2ms | ActiveRecord: 0.0ms | Allocations: 12781)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:48:42 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 552)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 2067)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 397)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 67.6ms | Allocations: 12062)
+Completed 200 OK in 86ms (Views: 80.4ms | ActiveRecord: 0.0ms | Allocations: 14163)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-17 23:48:44 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 228)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 115)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2211)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 53.0ms | Allocations: 11169)
+Completed 200 OK in 59ms (Views: 56.7ms | ActiveRecord: 0.0ms | Allocations: 12612)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:48:46 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 9617)
+Completed 200 OK in 55ms (Views: 53.5ms | ActiveRecord: 0.0ms | Allocations: 10394)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:48:47 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 448ms (ActiveRecord: 1.9ms | Allocations: 8654)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:48:48 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1305)
+  Rendered layout layouts/application.html.erb (Duration: 3.6ms | Allocations: 1380)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 3970)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="center jumbotron">
+<h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+<h2>
+
+</h2>
+<%= if urrent_user.role %>
+    <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% else %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% end %>
+</div>
+):
+1:    <div class="center jumbotron">
+2:    <h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+3:    <h2>
+4:    
+5:    </h2>
+6:    <%= if urrent_user.role %>
+7:        <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+8:        <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+9:        <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+10:        <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+11:    <% else %>
+12:        <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+13:    <% end %>
+14:    </div>
+  
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:48:52 -0400
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms | Allocations: 1719)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-17 23:48:55 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 6ms (ActiveRecord: 0.3ms | Allocations: 1473)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:48:57 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1238)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1307)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms | Allocations: 2850)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="center jumbotron">
+<h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+<h2>
+
+</h2>
+<%= if urrent_user.role %>
+    <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% else %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% end %>
+</div>
+):
+1:    <div class="center jumbotron">
+2:    <h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+3:    <h2>
+4:    
+5:    </h2>
+6:    <%= if urrent_user.role %>
+7:        <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+8:        <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+9:        <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+10:        <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+11:    <% else %>
+12:        <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+13:    <% end %>
+14:    </div>
+  
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+Started GET "/" for ::1 at 2022-04-17 23:49:03 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1234)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1303)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.8ms | Allocations: 2822)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="center jumbotron">
+<h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+<h2>
+
+</h2>
+<%= if current_user.role %>
+    <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% else %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% end %>
+</div>
+):
+1:    <div class="center jumbotron">
+2:    <h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+3:    <h2>
+4:    
+5:    </h2>
+6:    <%= if current_user.role %>
+7:        <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+8:        <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+9:        <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+10:        <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+11:    <% else %>
+12:        <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+13:    <% end %>
+14:    </div>
+  
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+Started GET "/" for ::1 at 2022-04-17 23:49:31 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1286)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1362)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms | Allocations: 3756)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="center jumbotron">
+<h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+<h2>
+
+</h2>
+<%= if current_user.role.admin? %>
+    <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% else %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% end %>
+</div>
+):
+1:    <div class="center jumbotron">
+2:    <h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+3:    <h2>
+4:    
+5:    </h2>
+6:    <%= if current_user.role.admin? %>
+7:        <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+8:        <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+9:        <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+10:        <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+11:    <% else %>
+12:        <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+13:    <% end %>
+14:    </div>
+  
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+Started GET "/" for ::1 at 2022-04-17 23:50:00 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1286)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1361)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.9ms | Allocations: 3951)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="center jumbotron">
+<h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+<h2>
+
+</h2>
+<%= if current_user.admin? %>
+    <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% else %>
+    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+<% end %>
+</div>
+):
+1:    <div class="center jumbotron">
+2:    <h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+3:    <h2>
+4:    
+5:    </h2>
+6:    <%= if current_user.admin? %>
+7:        <%= link_to "Manage Students", '../students', class: "btn btn-lg btn-primary" %>
+8:        <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
+9:        <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+10:        <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+11:    <% else %>
+12:        <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+13:    <% end %>
+14:    </div>
+  
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:6: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/static_pages/index.html.erb:11: syntax error, unexpected `else', expecting ')'
+app/views/static_pages/index.html.erb:13: syntax error, unexpected `end', expecting ')'
+app/views/static_pages/index.html.erb:16: syntax error, unexpected `end', expecting ')'
+Started GET "/" for ::1 at 2022-04-17 23:50:20 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 412)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.9ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 420)
+  Rendered layouts/_footer.html.erb (Duration: 2.4ms | Allocations: 176)
+  Rendered layout layouts/application.html.erb (Duration: 55.0ms | Allocations: 9989)
+Completed 200 OK in 78ms (Views: 67.1ms | ActiveRecord: 0.3ms | Allocations: 12625)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:50:26 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 36ms (ActiveRecord: 0.4ms | Allocations: 5768)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:50:26 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 298)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:50:26 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 552)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.8ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 397)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 40.7ms | Allocations: 11335)
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 0.0ms | Allocations: 13320)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-17 23:50:27 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 284)
+  Rendered devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 115)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 2845)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 11181)
+Completed 200 OK in 59ms (Views: 55.5ms | ActiveRecord: 0.0ms | Allocations: 12634)
+
+
+Started POST "/users" for ::1 at 2022-04-17 23:50:49 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"boss@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "boss@123.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "boss@123.com"], ["encrypted_password", "$2a$12$eWzgxJKRsTN4ZL2OytELsO56CLeXTKl/X9pmWBqaWOKBjuQK3J9Sa"], ["created_at", "2022-04-18 03:50:49.590205"], ["updated_at", "2022-04-18 03:50:49.590205"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 359ms (ActiveRecord: 4.3ms | Allocations: 7431)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:50:49 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 14.2ms | Allocations: 382)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 180)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 98)
+  Rendered layout layouts/application.html.erb (Duration: 54.2ms | Allocations: 8942)
+Completed 200 OK in 66ms (Views: 58.7ms | ActiveRecord: 0.3ms | Allocations: 11210)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:51:19 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 387)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.8ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 4.1ms | Allocations: 414)
+  Rendered layouts/_footer.html.erb (Duration: 2.6ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 62.4ms | Allocations: 9893)
+Completed 200 OK in 83ms (Views: 69.1ms | ActiveRecord: 0.3ms | Allocations: 12532)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:51:20 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 8029)
+Completed 200 OK in 53ms (Views: 46.6ms | ActiveRecord: 0.2ms | Allocations: 9764)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:51:21 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 8029)
+Completed 200 OK in 27ms (Views: 20.6ms | ActiveRecord: 0.2ms | Allocations: 9578)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:51:27 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.3ms | Allocations: 1919)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:51:27 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:51:27 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.2ms | Allocations: 552)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 27.3ms | Allocations: 2075)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.6ms | Allocations: 111)
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 397)
+  Rendered layouts/_footer.html.erb (Duration: 3.7ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 104.6ms | Allocations: 11408)
+Completed 200 OK in 133ms (Views: 127.2ms | ActiveRecord: 0.0ms | Allocations: 13373)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:51:29 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 401ms (ActiveRecord: 0.5ms | Allocations: 3596)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:51:29 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 381)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 180)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 8885)
+Completed 200 OK in 33ms (Views: 26.7ms | ActiveRecord: 0.4ms | Allocations: 11131)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:51:31 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.3ms | Allocations: 2090)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:51:31 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:51:31 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1095)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 51.8ms | Allocations: 9111)
+Completed 200 OK in 59ms (Views: 57.2ms | ActiveRecord: 0.0ms | Allocations: 9828)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:51:37 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"boss@123.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "boss@123.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (1.8ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", "2022-04-18 03:51:37.775994"], ["updated_at", "2022-04-18 03:51:37.776236"], ["id", 2]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 444ms (ActiveRecord: 8.0ms | Allocations: 6058)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:51:37 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 47.9ms | Allocations: 8035)
+Completed 200 OK in 55ms (Views: 49.5ms | ActiveRecord: 0.2ms | Allocations: 9584)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:52:23 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 389)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.9ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 414)
+  Rendered layouts/_footer.html.erb (Duration: 2.2ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 34.1ms | Allocations: 9968)
+Completed 200 OK in 44ms (Views: 37.8ms | ActiveRecord: 0.2ms | Allocations: 12410)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:52:24 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 8290)
+Completed 200 OK in 35ms (Views: 28.8ms | ActiveRecord: 0.3ms | Allocations: 10027)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:52:25 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "remember_created_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["remember_created_at", nil], ["updated_at", "2022-04-18 03:52:26.012984"], ["id", 2]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 67ms (ActiveRecord: 3.0ms | Allocations: 5058)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:52:26 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:52:26 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.8ms | Allocations: 552)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 22.8ms | Allocations: 2074)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 114.7ms | Allocations: 16642)
+Completed 200 OK in 156ms (Views: 142.7ms | ActiveRecord: 0.0ms | Allocations: 18429)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:52:27 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 402ms (ActiveRecord: 0.7ms | Allocations: 3591)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:52:27 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.6ms | Allocations: 149)
+  Rendered layouts/_footer.html.erb (Duration: 1.4ms | Allocations: 73)
+  Rendered layout layouts/application.html.erb (Duration: 168.1ms | Allocations: 8350)
+Completed 200 OK in 192ms (Views: 175.1ms | ActiveRecord: 0.2ms | Allocations: 9902)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:52:30 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 0.3ms | Allocations: 1854)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:52:30 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 245)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:52:30 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1062)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 50.8ms | Allocations: 9351)
+Completed 200 OK in 54ms (Views: 51.9ms | ActiveRecord: 0.0ms | Allocations: 10050)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:52:34 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"boss@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "boss@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 423ms (ActiveRecord: 0.2ms | Allocations: 2353)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:52:34 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 76)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 8.7ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 80.8ms | Allocations: 8083)
+Completed 200 OK in 102ms (Views: 86.6ms | ActiveRecord: 0.2ms | Allocations: 9630)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:53:37 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms | Allocations: 1800)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:53:37 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 245)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:53:37 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.1ms | Allocations: 553)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 2080)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.7ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 397)
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 58.7ms | Allocations: 11655)
+Completed 200 OK in 77ms (Views: 74.2ms | ActiveRecord: 0.0ms | Allocations: 13608)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:53:38 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 486ms (ActiveRecord: 0.2ms | Allocations: 3594)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:53:38 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 187)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 8933)
+Completed 200 OK in 59ms (Views: 49.2ms | ActiveRecord: 0.2ms | Allocations: 11179)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:54:19 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms | Allocations: 2090)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:54:20 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:54:20 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 3.0ms | Allocations: 552)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 13.3ms | Allocations: 2074)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.9ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 397)
+  Rendered layouts/_footer.html.erb (Duration: 3.4ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | Allocations: 11381)
+Completed 200 OK in 79ms (Views: 75.5ms | ActiveRecord: 0.0ms | Allocations: 13352)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:54:21 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 371ms (ActiveRecord: 0.2ms | Allocations: 3595)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:54:21 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 362)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 187)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 8938)
+Completed 200 OK in 59ms (Views: 48.7ms | ActiveRecord: 0.2ms | Allocations: 11187)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:55:44 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 5016)
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 5090)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.5ms | Allocations: 7672)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x0000000000fe60>
+Did you mean?  super):
+     9:     <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+    10:     <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+    11: <% end %>
+    12: <% if user.role == "students" %>
+    13:     <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+    14: <% end %>
+    15: <% if user.role == "admin" %>
+  
+app/views/static_pages/index.html.erb:12
+Started GET "/" for ::1 at 2022-04-17 23:56:02 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4960)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 5034)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.3ms | Allocations: 7621)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x000000000102c0>
+Did you mean?  super):
+     9:     <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+    10:     <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+    11: <% end %>
+    12: <% if user.role == 'students' %>
+    13:     <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+    14: <% end %>
+    15: <% if user.role == 'admin' %>
+  
+app/views/static_pages/index.html.erb:12
+Started GET "/" for ::1 at 2022-04-17 23:58:52 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 15.2ms | Allocations: 4971)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 5045)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.2ms | Allocations: 7632)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `user' for #<ActionView::Base:0x00000000010720>
+Did you mean?  super):
+     9:     <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
+    10:     <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+    11: <% end %>
+    12: <%=current_user.admin? %>
+    13: </div>
+  
+app/views/static_pages/index.html.erb:12
+Started GET "/" for ::1 at 2022-04-17 23:59:04 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 330)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.8ms | Allocations: 114)
+  Rendered layouts/_header.html.erb (Duration: 7.5ms | Allocations: 421)
+  Rendered layouts/_footer.html.erb (Duration: 2.5ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 10685)
+Completed 200 OK in 101ms (Views: 83.3ms | ActiveRecord: 0.9ms | Allocations: 13319)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-17 23:59:29 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.5ms | Allocations: 2090)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:59:29 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-17 23:59:29 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 8.0ms | Allocations: 552)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 2076)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 7.0ms | Allocations: 397)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 182)
+  Rendered layout layouts/application.html.erb (Duration: 74.6ms | Allocations: 11537)
+Completed 200 OK in 91ms (Views: 86.1ms | ActiveRecord: 0.0ms | Allocations: 13516)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-17 23:59:33 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"boss@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "boss@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 392ms (ActiveRecord: 0.2ms | Allocations: 3594)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:59:34 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 411)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.8ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 180)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 8654)
+Completed 200 OK in 58ms (Views: 51.9ms | ActiveRecord: 0.2ms | Allocations: 10901)
+
+
+Started GET "/" for ::1 at 2022-04-17 23:59:49 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 329)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.4ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 1.7ms | Allocations: 421)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 9617)
+Completed 200 OK in 47ms (Views: 41.3ms | ActiveRecord: 0.2ms | Allocations: 12236)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:00:04 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 355)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.1ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 421)
+  Rendered layouts/_footer.html.erb (Duration: 2.4ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 56.0ms | Allocations: 9954)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 0.5ms | Allocations: 12581)
+
+
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/" for ::1 at 2022-04-18 00:03:00 -0400
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 17.1ms | Allocations: 614)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.4ms | Allocations: 117)
+  Rendered layouts/_header.html.erb (Duration: 16.1ms | Allocations: 491)
+  Rendered layouts/_footer.html.erb (Duration: 25.1ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 433.9ms | Allocations: 21756)
+Completed 200 OK in 516ms (Views: 457.4ms | ActiveRecord: 3.8ms | Allocations: 32634)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:03:49 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 386)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.3ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 4.0ms | Allocations: 414)
+  Rendered layouts/_footer.html.erb (Duration: 3.1ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 52.8ms | Allocations: 9970)
+Completed 200 OK in 95ms (Views: 59.2ms | ActiveRecord: 0.3ms | Allocations: 12660)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-18 00:03:58 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (4.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-04-18 04:03:58.562579"], ["id", 2]]
+  [1m[36mTRANSACTION (6.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 75ms (ActiveRecord: 11.4ms | Allocations: 8388)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:03:58 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 367)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:03:58 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 4.3ms | Allocations: 682)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 23.9ms | Allocations: 3493)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 60.5ms | Allocations: 11721)
+Completed 200 OK in 67ms (Views: 65.0ms | ActiveRecord: 0.0ms | Allocations: 13717)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-18 00:04:00 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 227)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 186)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 49.8ms | Allocations: 3370)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 76.1ms | Allocations: 11862)
+Completed 200 OK in 84ms (Views: 81.1ms | ActiveRecord: 0.0ms | Allocations: 13504)
+
+
+Started POST "/users" for ::1 at 2022-04-18 00:04:14 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"bigboss@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bigboss@123.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "bigboss@123.com"], ["encrypted_password", "$2a$12$wF8.f1dZCjqM0Fr651ClQuoR9Wlmx3ICbKWWPmm8bKF.snT86er9S"], ["created_at", "2022-04-18 04:04:14.741850"], ["updated_at", "2022-04-18 04:04:14.741850"]]
+  [1m[36mTRANSACTION (3.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 407ms (ActiveRecord: 4.4ms | Allocations: 8610)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:04:14 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 89)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 152)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 8198)
+Completed 200 OK in 55ms (Views: 41.9ms | ActiveRecord: 0.4ms | Allocations: 9979)
+
+
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2022-04-18 00:11:19 -0400
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 6.0ms | Allocations: 672)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.6ms | Allocations: 117)
+  Rendered layouts/_header.html.erb (Duration: 5.8ms | Allocations: 481)
+  Rendered layouts/_footer.html.erb (Duration: 4.5ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 378.7ms | Allocations: 21779)
+Completed 200 OK in 504ms (Views: 402.7ms | ActiveRecord: 2.3ms | Allocations: 32657)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-18 00:11:24 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-04-18 04:11:24.368848"], ["id", 3]]
+  [1m[36mTRANSACTION (6.4ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 62ms (ActiveRecord: 7.4ms | Allocations: 8390)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:11:24 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 367)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:11:24 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 6.4ms | Allocations: 686)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 40.1ms | Allocations: 3499)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 71.6ms | Allocations: 12035)
+Completed 200 OK in 89ms (Views: 85.3ms | ActiveRecord: 0.0ms | Allocations: 15342)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-18 00:11:28 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.7ms | Allocations: 227)
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 186)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 23.2ms | Allocations: 2588)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 58.6ms | Allocations: 10774)
+Completed 200 OK in 79ms (Views: 75.0ms | ActiveRecord: 0.0ms | Allocations: 13204)
+
+
+Started POST "/users" for ::1 at 2022-04-18 00:11:43 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"king@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "king@123.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "king@123.com"], ["encrypted_password", "$2a$12$xv2lX7iPlXQ8PfUDa/.4.eG0UOEFoctefmE3EX.m8uVOWdKE7SH/K"], ["created_at", "2022-04-18 04:11:43.794886"], ["updated_at", "2022-04-18 04:11:43.794886"]]
+  [1m[36mTRANSACTION (3.1ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 389ms (ActiveRecord: 6.0ms | Allocations: 11501)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:11:43 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 152)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 8200)
+Completed 200 OK in 44ms (Views: 40.0ms | ActiveRecord: 0.2ms | Allocations: 9980)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-18 00:28:19 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-04-18 04:28:19.499893"], ["id", 4]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 50ms (ActiveRecord: 5.0ms | Allocations: 10741)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:28:19 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 433)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:28:19 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 194)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 166)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 9837)
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 0.0ms | Allocations: 10852)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-18 00:28:21 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 125)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1563)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 66.3ms | Allocations: 10496)
+Completed 200 OK in 70ms (Views: 68.3ms | ActiveRecord: 0.0ms | Allocations: 11657)
+
+
+Started POST "/users" for ::1 at 2022-04-18 00:28:37 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"king2@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "king2@123.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "king2@123.com"], ["encrypted_password", "$2a$12$EG54Kl.m8cPxUu.oo983GO9JRcGLN7b2cu2w/.4.KeY/OYg0YaupO"], ["created_at", "2022-04-18 04:28:37.464070"], ["updated_at", "2022-04-18 04:28:37.464070"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 385ms (ActiveRecord: 4.5ms | Allocations: 6195)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:28:37 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 184)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 38.0ms | Allocations: 8682)
+Completed 200 OK in 45ms (Views: 40.1ms | ActiveRecord: 0.2ms | Allocations: 10512)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-18 00:28:46 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.3ms | Allocations: 1709)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:28:46 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 148)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 38.1ms | Allocations: 8034)
+Completed 200 OK in 48ms (Views: 41.2ms | ActiveRecord: 0.3ms | Allocations: 9637)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-18 00:28:57 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (1.0ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-04-18 04:28:58.152431"], ["id", 5]]
+  [1m[36mTRANSACTION (3.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 76ms (ActiveRecord: 8.4ms | Allocations: 11200)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:28:58 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 428)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:28:58 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 194)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 1300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 166)
+  Rendered layouts/_footer.html.erb (Duration: 1.7ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 70.1ms | Allocations: 16139)
+Completed 200 OK in 81ms (Views: 73.7ms | ActiveRecord: 0.0ms | Allocations: 17152)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-18 00:29:01 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered devise/shared/_links.html.erb (Duration: 4.9ms | Allocations: 125)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1563)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 64.9ms | Allocations: 10495)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.0ms | Allocations: 11633)
+
+
+Started POST "/users" for ::1 at 2022-04-18 00:29:19 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"king3@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "king3@123.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "king3@123.com"], ["encrypted_password", "$2a$12$o/JJyIee2XCVMIlcPAizN.2ON1zUjUemgXJyvOIVLj3Ma7ZFgEuUG"], ["created_at", "2022-04-18 04:29:19.360978"], ["updated_at", "2022-04-18 04:29:19.360978"]]
+  [1m[36mTRANSACTION (3.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 337ms (ActiveRecord: 4.8ms | Allocations: 6195)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:29:19 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms | Allocations: 4654)
+
+
+  
+NameError (undefined local variable or method `resource_class' for #<StaticPagesController:0x0000000000f9d8>):
+  
+app/controllers/application_controller.rb:11:in `configure_permitted_parameters'
+Started GET "/" for ::1 at 2022-04-18 00:33:28 -0400
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+AbstractController::ActionNotFound (The action 'index' could not be found for ApplicationController
+Did you mean?  full_title
+               root_path?):
+  
+actionpack (6.1.5) lib/abstract_controller/base.rb:160:in `process'
+actionview (6.1.5) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.1.5) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.1.5) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.1.5) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.1.5) lib/action_dispatch/routing/route_set.rb:842:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+actionpack (6.1.5) lib/action_dispatch/http/content_security_policy.rb:19:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/cookies.rb:689:in `call'
+activerecord (6.1.5) lib/active_record/migration.rb:601:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.5) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.5) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.5) lib/action_dispatch/middleware/host_authorization.rb:142:in `call'
+rack-mini-profiler (2.3.4) lib/mini_profiler/profiler.rb:393:in `call'
+webpacker (5.4.3) lib/webpacker/dev_server_proxy.rb:25:in `perform_request'
+rack-proxy (0.7.2) lib/rack/proxy.rb:67:in `call'
+railties (6.1.5) lib/rails/engine.rb:539:in `call'
+puma (5.6.4) lib/puma/configuration.rb:252:in `call'
+puma (5.6.4) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.4) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.4) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.4) lib/puma/server.rb:441:in `process_client'
+puma (5.6.4) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for ::1 at 2022-04-18 00:34:07 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 435)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.9ms | Allocations: 112)
+  Rendered layouts/_header.html.erb (Duration: 25.7ms | Allocations: 480)
+  Rendered layouts/_footer.html.erb (Duration: 3.0ms | Allocations: 224)
+  Rendered layout layouts/application.html.erb (Duration: 315.8ms | Allocations: 21423)
+Completed 200 OK in 398ms (Views: 333.0ms | ActiveRecord: 1.6ms | Allocations: 32969)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-18 00:34:10 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.9ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-04-18 04:34:10.200431"], ["id", 6]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 56ms (ActiveRecord: 4.0ms | Allocations: 8363)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:34:10 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 367)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:34:10 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 27.8ms | Allocations: 684)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 57.6ms | Allocations: 3488)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 101.8ms | Allocations: 13745)
+Completed 200 OK in 120ms (Views: 118.0ms | ActiveRecord: 0.0ms | Allocations: 18044)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-18 00:34:11 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.9ms | Allocations: 227)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 186)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 19.6ms | Allocations: 2755)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 41.7ms | Allocations: 10941)
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.0ms | Allocations: 13211)
+
+
+Started POST "/users" for ::1 at 2022-04-18 00:34:23 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"king4@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "king4@123.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "king4@123.com"], ["encrypted_password", "$2a$12$jUFTQG7vyfc1b92B4XeQMOycMkh17k3EfSdRO31F2pMU9m4S9WwSi"], ["created_at", "2022-04-18 04:34:23.757999"], ["updated_at", "2022-04-18 04:34:23.757999"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 437ms (ActiveRecord: 3.4ms | Allocations: 8241)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:34:23 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 92)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 152)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 40.8ms | Allocations: 8502)
+Completed 200 OK in 61ms (Views: 46.9ms | ActiveRecord: 0.3ms | Allocations: 10142)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-18 00:34:56 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-04-18 04:34:56.475292"], ["id", 7]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 62ms (ActiveRecord: 3.8ms | Allocations: 12473)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:34:56 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 433)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:34:56 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 194)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 166)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 9837)
+Completed 200 OK in 45ms (Views: 43.3ms | ActiveRecord: 0.0ms | Allocations: 10852)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:35:04 -0400
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 7.2ms | Allocations: 713)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 67.7ms | Allocations: 5781)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.9ms | Allocations: 109)
+  Rendered layouts/_header.html.erb (Duration: 10.6ms | Allocations: 447)
+  Rendered layouts/_footer.html.erb (Duration: 2.9ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 431.9ms | Allocations: 27080)
+Completed 200 OK in 520ms (Views: 466.3ms | ActiveRecord: 2.3ms | Allocations: 37710)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:35:06 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 158)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 138)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 9283)
+Completed 200 OK in 41ms (Views: 37.5ms | ActiveRecord: 0.0ms | Allocations: 10153)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-18 00:35:08 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 6.5ms | Allocations: 236)
+  Rendered devise/shared/_links.html.erb (Duration: 2.6ms | Allocations: 188)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 28.7ms | Allocations: 2654)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 87.9ms | Allocations: 11851)
+Completed 200 OK in 100ms (Views: 98.4ms | ActiveRecord: 0.0ms | Allocations: 13512)
+
+
+Started POST "/users" for ::1 at 2022-04-18 00:35:19 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"king5@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "king5@123.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "king5@123.com"], ["encrypted_password", "$2a$12$NSGohZ1Lq0JJLWx3HaPgnOjrPK8shSlMgBAZ/XnebzMPYIsYGgMUe"], ["created_at", "2022-04-18 04:35:20.306796"], ["updated_at", "2022-04-18 04:35:20.306796"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 394ms (ActiveRecord: 3.3ms | Allocations: 9677)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:35:20 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 419)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 187)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 100)
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 8680)
+Completed 200 OK in 68ms (Views: 52.6ms | ActiveRecord: 0.6ms | Allocations: 11484)
+
+
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:10)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:10)
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Started DELETE "/users/sign_out" for ::1 at 2022-04-18 00:38:20 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.6ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-04-18 04:38:20.573730"], ["id", 8]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 92ms (ActiveRecord: 6.0ms | Allocations: 19528)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:38:20 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 438)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:38:20 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 194)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.0ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 166)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 9842)
+Completed 200 OK in 65ms (Views: 61.7ms | ActiveRecord: 0.0ms | Allocations: 10866)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-18 00:38:22 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 125)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1563)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 47.6ms | Allocations: 10487)
+Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 0.0ms | Allocations: 11632)
+
+
+Started POST "/users" for ::1 at 2022-04-18 00:38:35 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"king6@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "king6@123.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "king6@123.com"], ["encrypted_password", "$2a$12$jNMWQmMLcnlSfquIkC6wze22Hbg02BZ0yLxbj3utmdsv8QMwKY/Aq"], ["created_at", "2022-04-18 04:38:35.632467"], ["updated_at", "2022-04-18 04:38:35.632467"]]
+  [1m[36mTRANSACTION (3.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 371ms (ActiveRecord: 5.0ms | Allocations: 6220)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:38:35 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.3ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 184)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 8376)
+Completed 200 OK in 38ms (Views: 30.6ms | ActiveRecord: 0.4ms | Allocations: 10202)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-18 00:39:13 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-04-18 04:39:13.916480"], ["id", 9]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 41ms (ActiveRecord: 7.2ms | Allocations: 11213)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:39:13 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 433)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:39:13 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 194)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1300)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 166)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 50.7ms | Allocations: 9837)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.0ms | Allocations: 10852)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-18 00:39:16 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"czt@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "czt@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 415ms (ActiveRecord: 0.4ms | Allocations: 3350)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:39:17 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 135)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 184)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 43.1ms | Allocations: 8690)
+Completed 200 OK in 52ms (Views: 46.2ms | ActiveRecord: 0.2ms | Allocations: 10533)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-04-18 00:39:19 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Update (3.7ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2022-04-18 04:39:19.147846"], ["id", 1]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 31ms (ActiveRecord: 7.3ms | Allocations: 5188)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:39:19 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 257)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-18 00:39:19 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 153)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1095)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 132)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 61)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 9076)
+Completed 200 OK in 43ms (Views: 40.7ms | ActiveRecord: 0.0ms | Allocations: 9801)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-04-18 00:39:20 -0400
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 61)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 1563)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 163)
+  Rendered layouts/_footer.html.erb (Duration: 1.8ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 64.8ms | Allocations: 10486)
+Completed 200 OK in 69ms (Views: 66.8ms | ActiveRecord: 0.0ms | Allocations: 11632)
+
+
+Started POST "/users" for ::1 at 2022-04-18 00:39:40 -0400
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"king7@123.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role"=>"admin"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "king7@123.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["email", "king7@123.com"], ["encrypted_password", "$2a$12$CLXQUeaRcVrhRdVKESGk8urwtzP7WSuOY8AqsQdfmfLgHYGKDrA8u"], ["created_at", "2022-04-18 04:39:41.028960"], ["updated_at", "2022-04-18 04:39:41.028960"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 365ms (ActiveRecord: 5.0ms | Allocations: 6314)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:39:41 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 79)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 149)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 73)
+  Rendered layout layouts/application.html.erb (Duration: 27.7ms | Allocations: 8355)
+Completed 200 OK in 37ms (Views: 28.9ms | ActiveRecord: 0.6ms | Allocations: 9941)
+
+
+Started GET "/" for ::1 at 2022-04-18 00:49:19 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by StaticPagesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 460)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.9ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 3.9ms | Allocations: 420)
+  Rendered layouts/_footer.html.erb (Duration: 3.3ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | Allocations: 10029)
+Completed 200 OK in 160ms (Views: 61.1ms | ActiveRecord: 3.8ms | Allocations: 18595)
+
+
+Started GET "/reviews" for ::1 at 2022-04-18 00:49:21 -0400
+Processing by ReviewsController#index as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (1.9ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:18
+  Rendered reviews/index.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1448)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 159)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 9679)
+Completed 200 OK in 91ms (Views: 52.5ms | ActiveRecord: 6.2ms | Allocations: 13861)
+
+
+Started GET "/projects" for ::1 at 2022-04-18 00:49:26 -0400
+Processing by ProjectsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering projects/index.html.erb within layouts/application
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects"[0m
+  ↳ app/views/projects/index.html.erb:15
+  Rendered projects/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 3780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 156)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 39.5ms | Allocations: 12144)
+Completed 200 OK in 58ms (Views: 42.4ms | ActiveRecord: 4.7ms | Allocations: 15845)
+
+
+Started GET "/reviews" for ::1 at 2022-04-18 00:49:29 -0400
+Processing by ReviewsController#index as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/index.html.erb within layouts/application
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  ↳ app/views/reviews/index.html.erb:18
+  Rendered reviews/index.html.erb within layouts/application (Duration: 7.9ms | Allocations: 718)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 66.1ms | Allocations: 9330)
+Completed 200 OK in 79ms (Views: 67.2ms | ActiveRecord: 3.2ms | Allocations: 11019)
+
+
+Started GET "/students" for ::1 at 2022-04-18 00:49:31 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:16
+  Rendered students/index.html.erb within layouts/application (Duration: 23.5ms | Allocations: 4735)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 156)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 13052)
+Completed 200 OK in 72ms (Views: 47.4ms | ActiveRecord: 2.8ms | Allocations: 18517)
+
+
+Started GET "/teams" for ::1 at 2022-04-18 00:49:33 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  Rendered teams/index.html.erb within layouts/application (Duration: 22.3ms | Allocations: 3826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 156)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 12057)
+Completed 200 OK in 68ms (Views: 48.5ms | ActiveRecord: 3.1ms | Allocations: 17197)
+
+
+Started GET "/students" for ::1 at 2022-04-18 00:49:36 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:16
+  Rendered students/index.html.erb within layouts/application (Duration: 32.1ms | Allocations: 1233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 79.5ms | Allocations: 9394)
+Completed 200 OK in 119ms (Views: 80.7ms | ActiveRecord: 0.6ms | Allocations: 11099)
+
+
+Started GET "/students" for ::1 at 2022-04-18 00:49:48 -0400
+Processing by StudentsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering students/index.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/students/index.html.erb:16
+  Rendered students/index.html.erb within layouts/application (Duration: 8.3ms | Allocations: 1150)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 64.5ms | Allocations: 9818)
+Completed 200 OK in 81ms (Views: 66.5ms | ActiveRecord: 0.8ms | Allocations: 11389)
+
+
