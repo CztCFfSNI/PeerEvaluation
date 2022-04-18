@@ -4,7 +4,9 @@ GoodPET Peer Evaluation Tool
 </small>
 <nav>
 <ul>
-<li><%= link_to "Home", :back %></li>
+<% if user_signed_in? %>
+    <li><%= link_to "Back", :back %></li>
+<% end %>
 </ul>
 </nav>
 </footer>
