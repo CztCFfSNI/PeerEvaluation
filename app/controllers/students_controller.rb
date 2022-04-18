@@ -67,4 +67,8 @@ class StudentsController < ApplicationController
     def student_params
       params.require(:student).permit(:Fname, :Lname, :email)
     end
+
+    def validate_email(email)
+      (email ~= %r{^\S+@\S+.\S+$}xi).present?
+    end
 end
