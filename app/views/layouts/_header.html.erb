@@ -3,11 +3,15 @@
 <%= link_to "GoodPET", '#', id: "logo" %>
 <nav>
 <ul class="nav navbar-nav navbar-right">
-<li><%= link_to "Home", 'static_pages' %></li>
-<li><%= link_to "Help", '#' %></li>
-<li><%= link_to "Sign up", new_user_session_path, method: :get %></li>
-<li><%= link_to "Log in", user_session_path, method: :post %></li>
-<li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+<% if !user_signed_in? %>
+    <li><%= link_to "Help", '#' %></li>
+    <li><%= link_to "Sign up/Log in", user_session_path %></li>
+<% else %>
+    <li><%= link_to "Home", 'static_pages' %></li>
+    <li><%= link_to "Help", '#' %></li>
+    <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+    <li><%= link_to "Account Setting", edit_user_registration_path %></li>
+<% end %>
 </ul>
 </nav>
 </div>
