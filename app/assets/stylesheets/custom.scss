@@ -2,8 +2,34 @@
 @import "bootstrap";
 
 /* universal */
-body {
+html, body {
+    max-height: 100%;
+    background-color: #BB0000;
+    color: white;
+}
+
+a {
+    color: white;
+    font-size: 20px;
+}
+
+.links {
+    color:#fff;
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+body > .container {
     padding-top: 60px;
+    width: 100%;
+    background: #BB0000;
+    height: 100%;
+}
+
+center.jumbotron {
+    margin: 0;
+    height: 50%;
 }
 
 section {
@@ -16,6 +42,8 @@ textarea {
 
 .center {
     text-align: center;
+    background-color: #666666;
+    height: 100%;
 }
 
 .center h1 {
@@ -40,7 +68,7 @@ h2 {
     margin-bottom: 30px;
     text-align: center;
     font-weight: normal;
-    color: #777;
+    color: #fff;
 }
 
 p {
@@ -67,14 +95,16 @@ p {
     
 /* footer */
 footer {
-    margin-top: 45px;
     padding-top: 5px;
     border-top: 1px solid #eaeaea;
-    color: #777;
+    color: #eaeaea;
+    font-size: 30px;
+
 }
     
 footer a {
-    color: #555;
+    color: #eaeaea;
+    font-size: 30px;
 }
     
 footer a:hover {
@@ -94,3 +124,15 @@ footer ul li {
     float: left;
     margin-left: 15px;
 }
+
+.btn.btn-lg.btn-primary {
+    color: #fff;
+    background-color: #BB0000;
+    border-color: #BB0000;
+}
+
+form > div.field {
+    font-size: 20px;
+    padding-top: 50px;
+}
+
