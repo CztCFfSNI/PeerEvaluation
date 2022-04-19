@@ -6,7 +6,7 @@
 <% else %>
     <%=current_user.email%>
 <% end %>
-! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+! Welcome to GoodPET<br>(Good Peer Evaluation Tool)</h1>
 <h2>
 
 </h2>
@@ -14,10 +14,9 @@
     <%= link_to "Manage Teams", '../teams', class: "btn btn-lg btn-primary" %>
     <%= link_to "Manage Projects", '../projects', class: "btn btn-lg btn-primary" %>
 <% else %>
-    <%= link_to "Give Reviews", '../reviews', class: "btn btn-lg btn-primary" %>
+    <%= link_to "Give Reviews", '../reviews/new', class: "btn btn-lg btn-primary" %>
+    <%= link_to "View Reviews", '../reviews/show', class: "btn btn-lg btn-primary" %>
 <% end %>
-<%= current_user.role %>
-<%= current_user.email %>
 </div>
 
 <%
