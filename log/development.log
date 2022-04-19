@@ -17188,3 +17188,140 @@ Completed 200 OK in 209ms (Views: 197.6ms | ActiveRecord: 7.2ms | Allocations: 1
 
 
 >>>>>>> 6a6eb5e2f216fa06cb65786d9e182ddcbed4cd49
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /home/sparsh1910/Desktop/Projects/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /home/sparsh1910/Desktop/Projects/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Started GET "/" for 127.0.0.1 at 2022-04-18 23:14:50 -0400
+  [1m[35m (6.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "students"."Fname" FROM "students" WHERE (email = 'kustagishettar.1@osu.edu')[0m
+  ↳ app/views/static_pages/index.html.erb:5
+  [1m[36mStudent Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "kustagishettar.1@osu.edu"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/index.html.erb:23
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 37.4ms | Allocations: 5600)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.7ms | Allocations: 124)
+  Rendered layouts/_header.html.erb (Duration: 3.3ms | Allocations: 458)
+  Rendered layouts/_footer.html.erb (Duration: 0.8ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 3490.8ms | Allocations: 102716)
+Completed 200 OK in 3569ms (Views: 3501.8ms | ActiveRecord: 4.4ms | Allocations: 113587)
+
+
+Started GET "/reviews/show" for 127.0.0.1 at 2022-04-18 23:15:03 -0400
+Processing by ReviewsController#show as HTML
+  Parameters: {"id"=>"show"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/reviews_controller.rb:64:in `set_review'
+Completed 404 Not Found in 88ms (ActiveRecord: 4.8ms | Allocations: 4882)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Review with 'id'=show):
+  
+app/controllers/reviews_controller.rb:64:in `set_review'
+Started GET "/" for 127.0.0.1 at 2022-04-18 23:15:11 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "students"."Fname" FROM "students" WHERE (email = 'kustagishettar.1@osu.edu')[0m
+  ↳ app/views/static_pages/index.html.erb:5
+  [1m[36mStudent Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "kustagishettar.1@osu.edu"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/index.html.erb:23
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 23.1ms | Allocations: 1506)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 144)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 90.9ms | Allocations: 9138)
+Completed 200 OK in 114ms (Views: 93.4ms | ActiveRecord: 1.2ms | Allocations: 10920)
+
+
+Started GET "/reviews/new" for 127.0.0.1 at 2022-04-18 23:15:13 -0400
+Processing by ReviewsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering reviews/new.html.erb within layouts/application
+  Rendered reviews/_form.html.erb (Duration: 18.2ms | Allocations: 4698)
+  Rendered reviews/new.html.erb within layouts/application (Duration: 22.5ms | Allocations: 5065)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 164)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 12656)
+Completed 200 OK in 163ms (Views: 62.5ms | ActiveRecord: 0.5ms | Allocations: 18550)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-18 23:15:27 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "students"."Fname" FROM "students" WHERE (email = 'kustagishettar.1@osu.edu')[0m
+  ↳ app/views/static_pages/index.html.erb:5
+  [1m[36mStudent Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "kustagishettar.1@osu.edu"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/index.html.erb:23
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 22.7ms | Allocations: 1492)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 140)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered layout layouts/application.html.erb (Duration: 61.3ms | Allocations: 8808)
+Completed 200 OK in 106ms (Views: 67.0ms | ActiveRecord: 1.5ms | Allocations: 10558)
+
+
+Started GET "/static_pages" for 127.0.0.1 at 2022-04-18 23:15:33 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "students"."Fname" FROM "students" WHERE (email = 'kustagishettar.1@osu.edu')[0m
+  ↳ app/views/static_pages/index.html.erb:5
+  [1m[36mStudent Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "kustagishettar.1@osu.edu"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/index.html.erb:23
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 44.3ms | Allocations: 1457)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 140)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 87.2ms | Allocations: 8973)
+Completed 200 OK in 115ms (Views: 87.4ms | ActiveRecord: 6.4ms | Allocations: 10544)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2022-04-18 23:15:34 -0400
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.2ms | Allocations: 262)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 20.9ms | Allocations: 3327)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 149)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 66.0ms | Allocations: 11043)
+Completed 200 OK in 93ms (Views: 75.5ms | ActiveRecord: 0.4ms | Allocations: 14340)
+
+
+Started GET "/static_pages" for 127.0.0.1 at 2022-04-18 23:15:43 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "students"."Fname" FROM "students" WHERE (email = 'kustagishettar.1@osu.edu')[0m
+  ↳ app/views/static_pages/index.html.erb:5
+  [1m[36mStudent Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "kustagishettar.1@osu.edu"], ["LIMIT", 1]]
+  ↳ app/views/static_pages/index.html.erb:23
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 33.1ms | Allocations: 1492)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 140)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 71.5ms | Allocations: 8809)
+Completed 200 OK in 120ms (Views: 77.6ms | ActiveRecord: 1.9ms | Allocations: 10582)
+
+

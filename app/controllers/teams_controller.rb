@@ -61,7 +61,31 @@ class TeamsController < ApplicationController
   def add_students
     @team = Team.find(params[:id])
     params.permit([:student_emails])
-    student_emails = 
+    student_emails = params[:student_emails].split
+    unsuccessful = []
+    student_emails.each do |email|
+      student = Student.find_by email: email
+      if student != nil
+        if !student.in? @team.students
+          @team.students.push student
+        end
+      else 
+        unsuccessful.push student_emails
+      end
+    end 
+
+    respond_to do |format|
+      if @team.save
+        if !unsuccessful.empty?
+          format.html { redirect_to teams_url, notice: "Unable to add: " + unsuccessful.join(", ") + ".\nAll other students added!" }
+        else
+          format.html {redirect_to teams_url, notice: "All students added!"}
+        end
+      else
+        format.html { render :edit, status: :unprocessable_entity }
+        format.json { render json: @team.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
 
