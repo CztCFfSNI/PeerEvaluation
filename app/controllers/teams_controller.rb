@@ -65,10 +65,13 @@ class TeamsController < ApplicationController
     student_emails = params[:student_emails].split
     unsuccessful = []
     student_emails.each do |email|
-      student = Student.find_by email: email
-      if student != nil
+      @student = Student.find_by email: email
+      if @student != nil
         if !student.in? @team.students
-          @team.students.push student
+          @team.students.push(@student)
+          @team.save
+          @student.teams.push(@team)
+          @student.save
         end
       else 
         unsuccessful.push student_emails
@@ -93,13 +96,17 @@ class TeamsController < ApplicationController
   def remove_student
     @team = Team.find param[:team_id]
     @student = Student.find params[:student_id]
-    @team.students.delete @student
+    @team.students.delete(@student)
+    @team.save
+    @student.teams.delete(@team)
+    @student.save
 
     respond_to do |format|
       format.html { redirect_to teams_url notice: 'Student was successfully removed.' }
       format.json { head :no_content }
     end
   end
+
 
 
   private

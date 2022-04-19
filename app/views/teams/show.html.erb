@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <p>
   <strong>Name:</strong>
   <%= @team.name %>
@@ -7,7 +6,11 @@
 
 <p>
   <strong>Students:</strong>
-  <%= @team.students %>
+  <% @team.students.each do |student|%>
+  <ul>
+  <li><%= student.Fname + " " + student.Lname + "\n"%></li>
+  </ul>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_team_path(@team) %> |

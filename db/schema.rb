@@ -70,6 +70,8 @@ ActiveRecord::Schema.define(version: 2022_04_18_195500) do
   end
 
   add_foreign_key "reviews", "projects"
+  add_foreign_key "reviews", "students", column: "written_by_id"
+  add_foreign_key "reviews", "students", column: "written_for_id"
   add_foreign_key "student_teams", "students"
   add_foreign_key "student_teams", "teams"
 end
