@@ -21,22 +21,22 @@ class StudentsController < ApplicationController
 
   # POST /students or /students.json
   def create
-    @student = Student.new(student_params)
+      @student = Student.new(student_params)
 
-    respond_to do |format|
-      if @student.save
-        format.html { redirect_to '/'}
-        format.json { render :show, status: :created, location: @student }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @student.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @student.save
+          format.html { redirect_to '/'}
+          format.json { render :show, status: :created, location: @student }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @student.errors, status: :unprocessable_entity }
+        end
       end
-    end
   end
 
   # PATCH/PUT /students/1 or /students/1.json
   def update
-    if @student.email == current_user.email
+    if current_user.role == User.roles.keys[0] && @student.email == current_user.email
       respond_to do |format|
         if @student.update(student_params)
           format.html { redirect_to student_url(@student), notice: "Student was successfully updated." }
@@ -53,7 +53,7 @@ class StudentsController < ApplicationController
 
   # DELETE /students/1 or /students/1.json
   def destroy
-    if @student.email == current_user.email
+    if current_user.role == User.roles.keys[0] && @student.email == current_user.email
       @student.destroy
       current_user.destroy
 
