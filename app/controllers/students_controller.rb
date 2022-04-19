@@ -21,39 +21,48 @@ class StudentsController < ApplicationController
 
   # POST /students or /students.json
   def create
-    @student = Student.new(student_params)
+      @student = Student.new(student_params)
 
-    respond_to do |format|
-      if @student.save
-        format.html { redirect_to '/'}
-        format.json { render :show, status: :created, location: @student }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @student.errors, status: :unprocessable_entity }
+      respond_to do |format|
+        if @student.save
+          format.html { redirect_to '/'}
+          format.json { render :show, status: :created, location: @student }
+        else
+          format.html { render :new, status: :unprocessable_entity }
+          format.json { render json: @student.errors, status: :unprocessable_entity }
+        end
       end
-    end
   end
 
   # PATCH/PUT /students/1 or /students/1.json
   def update
-    respond_to do |format|
-      if @student.update(student_params)
-        format.html { redirect_to student_url(@student), notice: "Student was successfully updated." }
-        format.json { render :show, status: :ok, location: @student }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
-        format.json { render json: @student.errors, status: :unprocessable_entity }
+    if current_user.role == User.roles.keys[0] && @student.email == current_user.email
+      respond_to do |format|
+        if @student.update(student_params)
+          format.html { redirect_to student_url(@student), notice: "Student was successfully updated." }
+          format.json { render :show, status: :ok, location: @student }
+        else
+          format.html { render :edit, status: :unprocessable_entity }
+          format.json { render json: @student.errors, status: :unprocessable_entity }
+        end
       end
+    else
+      redirect_to '/students'
     end
   end
 
   # DELETE /students/1 or /students/1.json
   def destroy
-    @student.destroy
+    if current_user.role == User.roles.keys[0] && @student.email == current_user.email
+      @student.destroy
+      current_user.destroy
 
-    respond_to do |format|
-      format.html { redirect_to students_url, notice: "Student was successfully destroyed." }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to students_url, notice: "Student was successfully destroyed." }
+        format.json { head :no_content }
+      end
+    else
+      redirect_to '/students'
     end
   end
 

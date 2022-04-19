@@ -4,3 +4,11 @@
 
 <%= link_to 'Show', @student %> |
 <%= link_to 'Back', students_path %>
+
+<%
+ if current_user.role == User.roles.keys[1] || @student.email != current_user.email
+    controller.redirect_to '/students'
+    elsif current_user.role == User.roles.keys[0] && !Student.exists?(:email => current_user.email)
+        controller.redirect_to '/students/new'
+    end
+%>
