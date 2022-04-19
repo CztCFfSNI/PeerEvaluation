@@ -1,5 +1,5 @@
 class ReviewsController < ApplicationController
-  before_action :set_review, only: %i[ show edit update destroy ]
+  skip_before_action :verify_authenticity_token
 
   # GET /reviews or /reviews.json
   def index
@@ -12,7 +12,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @review = Review.new
+    @review = Review.new()
   end
 
   # GET /reviews/1/edit
@@ -22,12 +22,10 @@ class ReviewsController < ApplicationController
   # POST /reviews or /reviews.json
   def create
     @review = Review.new(review_params)
-    @review.written_by_id = current_student.id
-    #@review.written_for_id = params[:written_by_id]
+    
     respond_to do |format|
       if @review.save
-        format.html { redirect_to review_url(@review), notice: "Review was successfully created." }
-        format.json { render :show, status: :created, location: @review }
+        format.html { redirect_to :back, notice: "Review was successfully created." }
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @review.errors, status: :unprocessable_entity }
@@ -58,22 +56,14 @@ class ReviewsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_review
-      @review = Review.find(params[:id])
-    end
+  def get_my_reviews
+    @reviews = Review.where("written_for_id =?", get_my_id)
+  end
 
+  private
     # Only allow a list of trusted parameters through.
     def review_params
-      params.require(:review).permit(:personalscore, :workscore, :comment, )
-    end
-
-    # check to see if logged in as student (Sparsh)
-    def check_student
-      if !current_student
-        redirect_to :root, notice: "Must be logged in as Student"
-      end
+      params.require(:review).permit(:personalscore, :workscore, :comment, :written_by_id, :written_for_id, :project_id)
     end
 
 end
