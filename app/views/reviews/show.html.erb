@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+
 <% @reviews = controller.get_my_reviews %>
 <h1>Reviews</h1>
 
@@ -26,3 +26,9 @@
 </table>
 
 <br>
+
+<%
+ if current_user.role == User.roles.keys[0] && !Student.exists?(:email => current_user.email)
+    controller.redirect_to '/students/new'
+end
+%>

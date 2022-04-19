@@ -17,6 +17,7 @@ class TeamsController < ApplicationController
 
   # GET /teams/1/edit
   def edit
+
   end
 
   # POST /teams or /teams.json
@@ -85,6 +86,18 @@ class TeamsController < ApplicationController
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @team.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  # Function to remove student (Sparsh)
+  def remove_student
+    @team = Team.find param[:team_id]
+    @student = Student.find params[:student_id]
+    @team.students.delete @student
+
+    respond_to do |format|
+      format.html { redirect_to teams_url notice: 'Student was successfully removed.' }
+      format.json { head :no_content }
     end
   end
 
