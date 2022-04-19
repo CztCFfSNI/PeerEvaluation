@@ -57,6 +57,14 @@ class TeamsController < ApplicationController
     end
   end
 
+  # Function to add students to a team (Sparsh)
+  def add_students
+    @team = Team.find(params[:id])
+    params.permit([:student_emails])
+    student_emails = 
+  end
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_team

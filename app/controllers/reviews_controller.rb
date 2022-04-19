@@ -22,7 +22,8 @@ class ReviewsController < ApplicationController
   # POST /reviews or /reviews.json
   def create
     @review = Review.new(review_params)
-
+    @review.written_by_id = current_student.id
+    #@review.written_for_id = params[:written_by_id]
     respond_to do |format|
       if @review.save
         format.html { redirect_to review_url(@review), notice: "Review was successfully created." }
@@ -65,6 +66,14 @@ class ReviewsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def review_params
-      params.require(:review).permit(:projectno, :studentid, :personalscore, :workscore, :comment)
+      params.require(:review).permit(:personalscore, :workscore, :comment, )
     end
+
+    # check to see if logged in as student (Sparsh)
+    def check_student
+      if !current_student
+        redirect_to :root, notice: "Must be logged in as Student"
+      end
+    end
+
 end
