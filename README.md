@@ -29,4 +29,5 @@ Things you may want to cover:
 
 ## Controller Code Contributions
 Michael- Wrote review_controller.rb and application_controller.rb code for getting all reviews written for a specific student, based on current_user.email. This uses a select statement to find the student entity matching the user, and then another select statement to get the reviews with written_for_id equal to the id of this student.
+
 Zitao- Wrote application_controller.rb code for setting two different roles(students and admin) and asking users to sign up with a specific role before doing any other actions. Wrote students_controller.rb code for preventing students from entering pages without authority. Wrote some codes in views and now users' roles will determine the authority and the views you see.
