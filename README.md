@@ -26,3 +26,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## Controller Code Contributions
+Michael- Wrote review_controller.rb and application_controller.rb code for getting all reviews written for a specific student, based on current_user.email. This uses a select statement to find the student entity matching the user, and then another select statement to get the reviews with written_for_id equal to the id of this student.
