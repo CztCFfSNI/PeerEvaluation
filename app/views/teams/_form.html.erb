@@ -16,6 +16,11 @@
     <%= form.text_field :name %>
   </div>
 
+  <div class="field">
+    <%= form.label :student_emails, "Add all emails of students (who already have an acount).
+    Separate by white space." %><br/>
+    <%= form.text_area :student_emails, autofocus: true, autocomplete: "off" %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
