@@ -35650,3 +35650,186 @@ Processing by TeamsController#index as HTML
 Completed 200 OK in 144ms (Views: 132.0ms | ActiveRecord: 4.7ms | Allocations: 26118)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /home/sparsh1910/Desktop/Projects/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /home/sparsh1910/Desktop/Projects/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:29:26 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 18ms (ActiveRecord: 0.0ms | Allocations: 2418)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-04-19 15:29:27 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 704)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 3787)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.1ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 3.2ms | Allocations: 404)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 187)
+  Rendered layout layouts/application.html.erb (Duration: 108.9ms | Allocations: 23806)
+Completed 200 OK in 146ms (Views: 117.8ms | ActiveRecord: 4.0ms | Allocations: 31624)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-04-19 15:29:30 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"admin@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "admin@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 344ms (ActiveRecord: 0.3ms | Allocations: 6004)
+
+
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:29:30 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 596)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 43)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 179)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 101)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 8227)
+Completed 200 OK in 53ms (Views: 42.0ms | ActiveRecord: 0.5ms | Allocations: 10764)
+
+
+Started GET "/teams" for 127.0.0.1 at 2022-04-19 15:29:32 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:17
+  Rendered teams/index.html.erb within layouts/application (Duration: 154.8ms | Allocations: 21929)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 43)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 137)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 184.5ms | Allocations: 29622)
+Completed 200 OK in 220ms (Views: 181.7ms | ActiveRecord: 9.4ms | Allocations: 34531)
+
+
+Started GET "/teams/2/edit" for 127.0.0.1 at 2022-04-19 15:29:36 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:115:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 8.6ms | Allocations: 1496)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 19.6ms | Allocations: 1973)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 127)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 9550)
+Completed 200 OK in 59ms (Views: 45.0ms | ActiveRecord: 0.6ms | Allocations: 12109)
+
+
+Started PATCH "/teams/2" for 127.0.0.1 at 2022-04-19 15:29:48 -0400
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"1", "student_emails"=>"valid@gmail.com"}, "commit"=>"Update Team", "id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:115:in `set_team'
+[31mUnpermitted parameter: :student_emails[0m
+Redirected to http://127.0.0.1:3000/teams/2
+Completed 302 Found in 24ms (ActiveRecord: 0.5ms | Allocations: 3108)
+
+
+Started GET "/teams/2" for 127.0.0.1 at 2022-04-19 15:29:48 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:115:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/show.html.erb:9
+  Rendered teams/show.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1338)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 126)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 8650)
+Completed 200 OK in 67ms (Views: 49.6ms | ActiveRecord: 0.5ms | Allocations: 10949)
+
+
+Started GET "/teams" for 127.0.0.1 at 2022-04-19 15:29:52 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:17
+  Rendered teams/index.html.erb within layouts/application (Duration: 87.1ms | Allocations: 7165)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 126)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 68)
+  Rendered layout layouts/application.html.erb (Duration: 118.9ms | Allocations: 14694)
+Completed 200 OK in 131ms (Views: 121.7ms | ActiveRecord: 1.7ms | Allocations: 16265)
+
+
+Started GET "/teams/1/edit" for 127.0.0.1 at 2022-04-19 15:37:00 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:115:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mCACHE Team Load (0.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:63:in `add_students'
+[31mUnpermitted parameter: :id[0m
+  Rendered teams/_form.html.erb (Duration: 10.0ms | Allocations: 3205)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 12.4ms | Allocations: 3606)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 3680)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.4ms | Allocations: 7801)
+
+
+  
+ActionView::Template::Error (undefined method `split' for nil:NilClass):
+    21:     <%= form.label :student_emails, "Add all emails of students (who already have an acount).
+    22:     Separate by white space." %><br/>
+    23:     <%= form.text_area :student_emails, autofocus: true, autocomplete: "off" %>
+    24:     <% controller.add_students %>
+    25:   </div>
+    26: 
+    27:   <div class="actions">
+  
+app/controllers/teams_controller.rb:65:in `add_students'
+app/views/teams/_form.html.erb:24
+app/views/teams/_form.html.erb:1
+app/views/teams/edit.html.erb:3
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /home/sparsh1910/Desktop/Projects/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /home/sparsh1910/Desktop/Projects/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
