@@ -6,7 +6,10 @@
 <%= link_to 'Back', teams_path %>
 
 <%
- if current_user.role == User.roles.keys[0] && !Student.exists?(:email => current_user.email)
-        controller.redirect_to '/students/new'
-    end
+ if current_user.role == User.roles.keys[0] 
+  controller.redirect_to '/static_pages'
+  if !Student.exists?(:email => current_user.email)
+    controller.redirect_to '/students/new'
+  end
+end
 %>
