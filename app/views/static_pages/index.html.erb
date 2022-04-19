@@ -1,5 +1,12 @@
 <div class="center jumbotron">
-<h1>Hi <%= current_user.email%>! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
+
+<h1>Hi 
+<% if current_user.role == User.roles.keys[0] %>
+ <%=Student.where("email = ?", current_user.email).pluck(:Fname).first%>
+<% else %>
+    <%=current_user.email%>
+<% end %>
+! Welcome to GoodPET (Good Peer Evaluation Tool)</h1>
 <h2>
 
 </h2>
