@@ -1,6 +1,4 @@
-# README
-
-## Presentation Materials
+# Presentation Materials
 - [Presentation Slides](https://docs.google.com/presentation/d/1CxEjYkrvY5vLyQvEOWeyerpJmUNsR-_vojjTn90u0-I/edit#slide=id.gc6fa3c898_0_0)
 - [Database ERD](https://lucid.app/lucidchart/bb169a01-6c08-4bfd-a07b-7a78dbe80c18/edit?invitationId=inv_2ff39713-72f6-491c-aef2-0f1377bc3cc1&page=0_0#)
 
@@ -21,7 +19,7 @@ Next, open GoodPET in your browser by navigating to the link shown in the termin
 
 ## More Info
 
-Information about the ERD,Database Tables, logic format, etc. can be found at the presentation link above. 
+Information about the ERD, Database Tables, logic format, etc. can be found at the presentation link above. 
 
 ## Testing
 
