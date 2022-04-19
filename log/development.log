@@ -35564,3 +35564,89 @@ Processing by TeamsController#show as HTML
 Completed 200 OK in 101ms (Views: 82.6ms | ActiveRecord: 2.7ms | Allocations: 18571)
 
 
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /home/sparsh1910/Desktop/Projects/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /home/sparsh1910/Desktop/Projects/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Started GET "/" for 127.0.0.1 at 2022-04-19 15:25:41 -0400
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 118)
+  Rendered layouts/_header.html.erb (Duration: 1.2ms | Allocations: 456)
+  Rendered layouts/_footer.html.erb (Duration: 0.9ms | Allocations: 181)
+  Rendered layout layouts/application.html.erb (Duration: 88.6ms | Allocations: 21064)
+Completed 200 OK in 146ms (Views: 98.6ms | ActiveRecord: 1.3ms | Allocations: 31941)
+
+
+Started GET "/teams" for 127.0.0.1 at 2022-04-19 15:25:44 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  Rendered teams/index.html.erb within layouts/application (Duration: 34.0ms | Allocations: 9670)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 43)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 137)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 62.9ms | Allocations: 17172)
+Completed 200 OK in 89ms (Views: 67.0ms | ActiveRecord: 1.7ms | Allocations: 22085)
+
+
+Started GET "/teams" for 127.0.0.1 at 2022-04-19 15:27:01 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  Rendered teams/index.html.erb within layouts/application (Duration: 37.5ms | Allocations: 5746)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 5830)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.3ms | Allocations: 8585)
+
+
+  
+ActionView::Template::Error (undefined method `students' for nil:NilClass):
+    14:     <% @teams.each do |team| %>
+    15:       <tr>
+    16:         <td><%= team.name %></td>
+    17:         <td><% @team.students.each do |student|%>
+    18:             <ul>
+    19:               <li><%= student.Fname + " " + student.Lname + "\n"%></li>
+    20:             </ul>
+  
+app/views/teams/index.html.erb:17
+app/views/teams/index.html.erb:14
+Started GET "/teams" for 127.0.0.1 at 2022-04-19 15:27:22 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:17
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:17
+  Rendered teams/index.html.erb within layouts/application (Duration: 94.6ms | Allocations: 14635)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.5ms | Allocations: 112)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 173)
+  Rendered layout layouts/application.html.erb (Duration: 132.2ms | Allocations: 23375)
+Completed 200 OK in 144ms (Views: 132.0ms | ActiveRecord: 4.7ms | Allocations: 26118)
+
+
