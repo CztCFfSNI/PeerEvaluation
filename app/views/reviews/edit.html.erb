@@ -3,3 +3,9 @@
 <%= render 'form', review: @review %>
 
 <%= link_to 'Show', @review %> |
+
+<%
+ if current_user.role == User.roles.keys[0] && !Student.exists?(:email => current_user.email)
+        controller.redirect_to '/students/new'
+    end
+%>
