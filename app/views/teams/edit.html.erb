@@ -9,7 +9,8 @@
         <td><%= student.Lname %></td>
         <td><%= student.email %></td>
         <td><%= student.id %></td>
-        <td><%= link_to 'Add', method: :add, data: { confirm: 'Are you sure?' }%></td>
+        <td><%= link_to 'Add', :controller =>'teams', :action => 'add', :id => @team.id, :student_id => student.id %>/td>
+
       </tr>
     <% end %>
 </table>

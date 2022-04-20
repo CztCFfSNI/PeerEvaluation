@@ -62,9 +62,8 @@ class TeamsController < ApplicationController
   end
 
   def add
-    @team = Team.find(params[:id])
-    @team.name = "123"
-    @team.save
+    @student_teams = Student_Teams.new(params[:id], params[:student_id])
+    @student_teams.save
   end
 
   # Function to add students to a team (Sparsh)
