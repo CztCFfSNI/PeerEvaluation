@@ -15,14 +15,16 @@
       <tr>
         <td><%= team.name %></td>
         <td><%= team.id %></td>
-        <td><% team.students.each do |student|%>
+        <td><%= link_to 'Show', team %></td>
+        <td><%= link_to 'Edit', edit_team_path(team) %></td>
+        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <tr>
+      <td><% team.students.each do |student|%>
             <ul>
               <li><%= student.Fname + " " + student.Lname + "\n"%></li>
             </ul>
            <% end %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
