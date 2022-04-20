@@ -2,12 +2,24 @@
 
 <%= render 'form', project: @project%>
 
+<p>
+  <strong>Teams:</strong>
+<% @project.teams.each do |team|%>
+  <ul>
+  <li><%= team.name %></li>
+  </ul>
+  <% end %>
+</p>
+
 <table>
 <% @teams.each do |team| %>
       <tr>
         <td><%= team.name %></td>
-        <td><%= team.id %></td>
-        <td><%= link_to 'Add',controller: "project", action:"add", project_id: @project.id, team_id: team.id%>/td>
+        <%if !(@project.teams.include? team)%>
+        <td><%= link_to 'Add',controller: "project", action:"add", project_id: @project.id, team_id: team.id%></td>
+        <%else%>
+        <td><%= link_to 'Remove',controller: "project", action:"remove", project_id: @project.id, team_id: team.id%></td>
+        <%end%>
       </tr>
     <% end %>
 </table>
