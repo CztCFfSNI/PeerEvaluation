@@ -4,20 +4,23 @@ class TeamsController < ApplicationController
   # GET /teams or /teams.json
   def index
     @teams = Team.all
+    @students = Student.all
   end
 
   # GET /teams/1 or /teams/1.json
   def show
+    @students = Student.all
   end
 
   # GET /teams/new
   def new
     @team = Team.new
+    @students = Student.all
   end
 
   # GET /teams/1/edit
   def edit
-
+    @students = Student.all
   end
 
   # POST /teams or /teams.json
@@ -56,6 +59,12 @@ class TeamsController < ApplicationController
       format.html { redirect_to teams_url, notice: "Team was successfully destroyed." }
       format.json { head :no_content }
     end
+  end
+
+  def add
+    @team = Team.find(params[:id])
+    @team.name = "123"
+    @team.save
   end
 
   # Function to add students to a team (Sparsh)
@@ -117,6 +126,6 @@ class TeamsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def team_params
-      params.require(:team).permit(:name)
+      params.require(:team).permit(:name, :students)
     end
 end

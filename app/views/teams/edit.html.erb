@@ -2,6 +2,18 @@
 
 <%= render 'form', team: @team %>
 
+  <table>
+<% @students.each do |student| %>
+      <tr>
+        <td><%= student.Fname %></td>
+        <td><%= student.Lname %></td>
+        <td><%= student.email %></td>
+        <td><%= student.id %></td>
+        <td><%= link_to 'Add', method: :add, data: { confirm: 'Are you sure?' }%></td>
+      </tr>
+    <% end %>
+</table>
+
 <%= link_to 'Show', @team %> |
 <%= link_to 'Back', teams_path %>
 

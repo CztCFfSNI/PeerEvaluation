@@ -14,6 +14,7 @@
     <% @teams.each do |team| %>
       <tr>
         <td><%= team.name %></td>
+        <td><%= team.id %></td>
         <td><% team.students.each do |student|%>
             <ul>
               <li><%= student.Fname + " " + student.Lname + "\n"%></li>
@@ -26,7 +27,6 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Team', new_team_path %>

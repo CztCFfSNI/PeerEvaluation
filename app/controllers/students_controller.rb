@@ -22,7 +22,7 @@ class StudentsController < ApplicationController
 
   # POST /students or /students.json
   def create
-    if current_user.role == User.roles.keys[0]
+    if current_user.role == User.roles.keys[0] && !Student.exists?(:email => current_user.email)
       @student = Student.new(student_params)
 
       respond_to do |format|
@@ -51,8 +51,6 @@ class StudentsController < ApplicationController
           format.json { render json: @student.errors, status: :unprocessable_entity }
         end
       end
-    else
-      redirect_to '/students'
     end
   end
 
