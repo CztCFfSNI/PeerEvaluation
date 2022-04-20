@@ -50202,6 +50202,7 @@ Processing by TeamsController#index as HTML
 Completed 200 OK in 139ms (Views: 111.7ms | ActiveRecord: 2.9ms | Allocations: 16245)
 
 
+<<<<<<< HEAD
 DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /home/sparsh1910/Desktop/Projects/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
 DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /home/sparsh1910/Desktop/Projects/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
 Started GET "/" for 127.0.0.1 at 2022-04-20 00:44:04 -0400
@@ -50348,10 +50349,240 @@ Completed 200 OK in 81ms (Views: 61.8ms | ActiveRecord: 0.8ms | Allocations: 113
 Started GET "/teams" for 127.0.0.1 at 2022-04-20 00:44:25 -0400
 Processing by TeamsController#index as HTML
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+=======
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Started GET "/static_pages" for ::1 at 2022-04-20 03:33:50 -0400
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 940)
+Started GET "/" for ::1 at 2022-04-20 03:33:57 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 127)
+Started DELETE "/users/sign_out" for ::1 at 2022-04-20 03:33:59 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 123ms (ActiveRecord: 3.7ms | Allocations: 9633)
+
+
+Started GET "/" for ::1 at 2022-04-20 03:33:59 -0400
+Processing by StaticPagesController#index as HTML
+Completed 401 Unauthorized in 11ms (ActiveRecord: 0.0ms | Allocations: 407)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-04-20 03:34:00 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 36.9ms | Allocations: 799)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 103.9ms | Allocations: 4668)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.1ms | Allocations: 117)
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 407)
+  Rendered layouts/_footer.html.erb (Duration: 2.3ms | Allocations: 220)
+  Rendered layout layouts/application.html.erb (Duration: 18222.7ms | Allocations: 194471)
+Completed 200 OK in 18448ms (Views: 18273.4ms | ActiveRecord: 2.4ms | Allocations: 206853)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 139)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 13518.8ms | Allocations: 187634)
+Completed 200 OK in 13535ms (Views: 13520.1ms | ActiveRecord: 1.7ms | Allocations: 190482)
+
+
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 162)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 62)
+  Rendered layout layouts/application.html.erb (Duration: 12504.2ms | Allocations: 155320)
+Completed 200 OK in 12539ms (Views: 12535.2ms | ActiveRecord: 0.0ms | Allocations: 157462)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-04-20 03:34:22 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"c2@123.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "c2@123.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 348ms (ActiveRecord: 1.9ms | Allocations: 8699)
+
+
+Started GET "/" for ::1 at 2022-04-20 03:34:23 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 77)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 8216)
+Completed 200 OK in 40ms (Views: 34.5ms | ActiveRecord: 0.2ms | Allocations: 9990)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:34:25 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (1.5ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 109.7ms | Allocations: 24328)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 136)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 133.2ms | Allocations: 32551)
+Completed 200 OK in 185ms (Views: 129.2ms | ActiveRecord: 8.3ms | Allocations: 39978)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:34:29 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 10.3ms | Allocations: 1561)
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 25.5ms | Allocations: 5693)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 71)
+  Rendered layout layouts/application.html.erb (Duration: 68.3ms | Allocations: 13903)
+Completed 200 OK in 90ms (Views: 68.8ms | ActiveRecord: 1.2ms | Allocations: 17078)
+
+
+Started PATCH "/teams/1" for ::1 at 2022-04-20 03:36:34 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"Group 9", "student_id"=>"1"}, "commit"=>"Update Team", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:43:in `update'
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 5.9ms | Allocations: 17444)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Student(#26860) expected, got nil which is an instance of NilClass(#40)):
+  
+app/controllers/teams_controller.rb:43:in `update'
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:37:05 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 8.7ms | Allocations: 1018)
+  [1m[36mStudent Load (1.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 26.0ms | Allocations: 7142)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 56.4ms | Allocations: 15429)
+Completed 200 OK in 67ms (Views: 55.2ms | ActiveRecord: 2.9ms | Allocations: 18016)
+
+
+Started PATCH "/teams/1" for ::1 at 2022-04-20 03:37:16 -0400
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"Group 9", "student_id"=>"3"}, "commit"=>"Update Team", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:43:in `update'
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.7ms | Allocations: 3367)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Student(#26860) expected, got nil which is an instance of NilClass(#40)):
+  
+app/controllers/teams_controller.rb:43:in `update'
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:37:24 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 3.4ms | Allocations: 646)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 9.6ms | Allocations: 3371)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 11418)
+Completed 200 OK in 42ms (Views: 32.8ms | ActiveRecord: 1.0ms | Allocations: 13553)
+
+
+Started GET "/teams/2/edit" for ::1 at 2022-04-20 03:37:27 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.1ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 3.0ms | Allocations: 642)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 17.1ms | Allocations: 3365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 37.6ms | Allocations: 11394)
+Completed 200 OK in 51ms (Views: 38.5ms | ActiveRecord: 1.7ms | Allocations: 13514)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:37:32 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+>>>>>>> 800b2c6cd3e1e8053e6d0df343fd354871946306
   Rendering layout layouts/application.html.erb
   Rendering teams/index.html.erb within layouts/application
   [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
   ↳ app/views/teams/index.html.erb:14
+<<<<<<< HEAD
   [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
   ↳ app/views/teams/index.html.erb:23
   [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
@@ -50643,11 +50874,269 @@ Processing by TeamsController#index as HTML
   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
   ↳ app/views/teams/index.html.erb:14
   [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+=======
+  [1m[36mStudent Load (2.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (2.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 50.4ms | Allocations: 9826)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 17585)
+Completed 200 OK in 77ms (Views: 66.5ms | ActiveRecord: 6.3ms | Allocations: 19170)
+
+
+Started GET "/teams/2/edit" for ::1 at 2022-04-20 03:37:33 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 1.5ms | Allocations: 640)
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 20.6ms | Allocations: 3363)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 57.6ms | Allocations: 11770)
+Completed 200 OK in 71ms (Views: 58.6ms | ActiveRecord: 3.1ms | Allocations: 13891)
+
+
+Started PATCH "/teams/2" for ::1 at 2022-04-20 03:37:36 -0400
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"1", "student_id"=>"1"}, "commit"=>"Update Team", "id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:43:in `update'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.2ms | Allocations: 3256)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Student(#26860) expected, got nil which is an instance of NilClass(#40)):
+  
+app/controllers/teams_controller.rb:43:in `update'
+Started GET "/teams/2/edit" for ::1 at 2022-04-20 03:38:57 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.7ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:127:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 2.1ms | Allocations: 1017)
+  [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 20.5ms | Allocations: 7448)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 52)
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 15691)
+Completed 200 OK in 108ms (Views: 56.1ms | ActiveRecord: 6.9ms | Allocations: 30133)
+
+
+Started PATCH "/teams/2" for ::1 at 2022-04-20 03:38:58 -0400
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"1", "student_id"=>"1"}, "commit"=>"Update Team", "id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:127:in `set_team'
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:43:in `update'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:44:in `update'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms | Allocations: 5617)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Student(#33300) expected, got nil which is an instance of NilClass(#40)):
+  
+app/controllers/teams_controller.rb:44:in `update'
+Started GET "/teams/2/edit" for ::1 at 2022-04-20 03:39:51 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:127:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 3.2ms | Allocations: 734)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 13.2ms | Allocations: 3475)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 126)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 48.3ms | Allocations: 11727)
+Completed 200 OK in 62ms (Views: 49.7ms | ActiveRecord: 0.8ms | Allocations: 13959)
+
+
+Started PATCH "/teams/2" for ::1 at 2022-04-20 03:39:52 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"1", "student_id"=>"1"}, "commit"=>"Update Team", "id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (2.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:127:in `set_team'
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:43:in `update'
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:44:in `update'
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 11.0ms | Allocations: 17883)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Student(#39140) expected, got "nil" which is an instance of String(#3300)):
+  
+app/controllers/teams_controller.rb:44:in `update'
+Started GET "/teams/2/edit" for ::1 at 2022-04-20 03:40:41 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:127:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 2.6ms | Allocations: 1305)
+  [1m[36mStudent Load (2.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 33.6ms | Allocations: 8145)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.6ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.5ms | Allocations: 360)
+  Rendered layouts/_footer.html.erb (Duration: 2.1ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 69.3ms | Allocations: 17411)
+Completed 200 OK in 121ms (Views: 74.0ms | ActiveRecord: 6.1ms | Allocations: 32636)
+
+
+Started PATCH "/teams/2" for ::1 at 2022-04-20 03:40:45 -0400
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"1", "student_email"=>"asdasd@gmail.com"}, "commit"=>"Update Team", "id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:127:in `set_team'
+  [1m[36mCACHE Team Load (0.0ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:43:in `update'
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."email" = ? LIMIT ?[0m  [["email", "student_email"], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:44:in `update'
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.1ms | Allocations: 5252)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Student(#44440) expected, got nil which is an instance of NilClass(#40)):
+  
+app/controllers/teams_controller.rb:44:in `update'
+Started GET "/teams/2/edit" for ::1 at 2022-04-20 03:44:58 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 5.8ms | Allocations: 2220)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 8.2ms | Allocations: 2736)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 2810)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 5.1ms | Allocations: 17991)
+
+
+  
+ActionView::Template::Error (Couldn't find Student without an ID):
+    19: 
+    20:   <div class="field">
+    21:     <%= form.label :student_id, "Add student_id." %><br/>
+    22:     <%= form.text_area :student_id, :value => Student.find(params[:student_id]).id %>
+    23:   </div>
+    24: 
+    25:   <div class="actions">
+  
+app/views/teams/_form.html.erb:22
+app/views/teams/_form.html.erb:1
+app/views/teams/edit.html.erb:3
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:45:02 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 2.3ms | Allocations: 1487)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1581)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1649)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.7ms | Allocations: 3920)
+
+
+  
+ActionView::Template::Error (Couldn't find Student without an ID):
+    19: 
+    20:   <div class="field">
+    21:     <%= form.label :student_id, "Add student_id." %><br/>
+    22:     <%= form.text_area :student_id, :value => Student.find(params[:student_id]).id %>
+    23:   </div>
+    24: 
+    25:   <div class="actions">
+  
+app/views/teams/_form.html.erb:22
+app/views/teams/_form.html.erb:1
+app/views/teams/edit.html.erb:3
+Started GET "/" for ::1 at 2022-04-20 03:45:05 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 573)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.7ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 393)
+  Rendered layouts/_footer.html.erb (Duration: 3.4ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 51.2ms | Allocations: 9928)
+Completed 200 OK in 68ms (Views: 60.3ms | ActiveRecord: 0.3ms | Allocations: 12498)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:45:06 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+>>>>>>> 800b2c6cd3e1e8053e6d0df343fd354871946306
   ↳ app/views/teams/index.html.erb:23
   [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
   ↳ app/views/teams/index.html.erb:23
   [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
   ↳ app/views/teams/index.html.erb:23
+<<<<<<< HEAD
   [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
   ↳ app/views/teams/index.html.erb:23
   [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
@@ -50764,11 +51253,171 @@ Processing by TeamsController#index as HTML
   [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
   ↳ app/views/teams/index.html.erb:23
   [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+=======
+  [1m[36mStudent Load (4.0ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
   ↳ app/views/teams/index.html.erb:23
   [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
   ↳ app/views/teams/index.html.erb:23
   [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
   ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 76.3ms | Allocations: 14839)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 136)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 100.0ms | Allocations: 22833)
+Completed 200 OK in 109ms (Views: 93.0ms | ActiveRecord: 9.4ms | Allocations: 24752)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:45:07 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 2.1ms | Allocations: 1551)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1645)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1714)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.4ms | Allocations: 4395)
+
+
+  
+ActionView::Template::Error (Couldn't find Student without an ID):
+    19: 
+    20:   <div class="field">
+    21:     <%= form.label :student_id, "Add student_id." %><br/>
+    22:     <%= form.text_area :student_id, :value => Student.find(params[:student_id]).id %>
+    23:   </div>
+    24: 
+    25:   <div class="actions">
+  
+app/views/teams/_form.html.erb:22
+app/views/teams/_form.html.erb:1
+app/views/teams/edit.html.erb:3
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:45:56 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/views/teams/_form.html.erb:22
+  Rendered teams/_form.html.erb (Duration: 6.9ms | Allocations: 3876)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4385)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4459)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.9ms | Allocations: 7502)
+
+
+  
+ActionView::Template::Error (undefined method `id' for nil:NilClass):
+    19: 
+    20:   <div class="field">
+    21:     <%= form.label :student_id, "Add student_id." %><br/>
+    22:     <%= form.text_area :student_id, :value => Student.find_by(id: :student_id).id %>
+    23:   </div>
+    24: 
+    25:   <div class="actions">
+  
+app/views/teams/_form.html.erb:22
+app/views/teams/_form.html.erb:1
+app/views/teams/edit.html.erb:3
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:46:55 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 5.7ms | Allocations: 1213)
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 18.1ms | Allocations: 5280)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.6ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 2.0ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 55.8ms | Allocations: 14559)
+Completed 200 OK in 70ms (Views: 59.4ms | ActiveRecord: 1.6ms | Allocations: 17737)
+
+
+Started PATCH "/teams/1" for ::1 at 2022-04-20 03:46:58 -0400
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"Group 9", "student_id"=>"1"}, "commit"=>"Update Team", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/teams_controller.rb:43:in `update'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.8ms | Allocations: 4256)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'student_id' for Team.):
+  
+app/controllers/teams_controller.rb:46:in `block in update'
+app/controllers/teams_controller.rb:45:in `update'
+Started PATCH "/teams/1" for ::1 at 2022-04-20 03:47:35 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"Group 9", "student_id"=>"1"}, "commit"=>"Update Team", "id"=>"1"}
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/teams_controller.rb:43:in `update'
+Redirected to http://localhost:3000/teams/1
+Completed 302 Found in 70ms (ActiveRecord: 5.5ms | Allocations: 18006)
+
+
+Started GET "/teams/1" for ::1 at 2022-04-20 03:47:35 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (1.5ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 21.7ms | Allocations: 4664)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 81)
+  Rendered layout layouts/application.html.erb (Duration: 56.3ms | Allocations: 12888)
+Completed 200 OK in 77ms (Views: 56.2ms | ActiveRecord: 3.5ms | Allocations: 15518)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:47:38 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (1.5ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+>>>>>>> 800b2c6cd3e1e8053e6d0df343fd354871946306
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+<<<<<<< HEAD
   Rendered teams/index.html.erb within layouts/application (Duration: 105.6ms | Allocations: 7172)
 [Webpacker] Everything's up-to-date. Nothing to do
   Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 40)
@@ -51183,11 +51832,834 @@ Processing by TeamsController#show as HTML
   [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
   ↳ app/controllers/teams_controller.rb:123:in `set_team'
 Completed 404 Not Found in 38ms (ActiveRecord: 6.4ms | Allocations: 2240)
+=======
+  Rendered teams/index.html.erb within layouts/application (Duration: 45.3ms | Allocations: 10424)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | Allocations: 18283)
+Completed 200 OK in 73ms (Views: 62.6ms | ActiveRecord: 3.1ms | Allocations: 20092)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:47:39 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 4.6ms | Allocations: 853)
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 18.2ms | Allocations: 4404)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 12787)
+Completed 200 OK in 52ms (Views: 40.9ms | ActiveRecord: 1.1ms | Allocations: 14921)
+
+
+Started PATCH "/teams/1" for ::1 at 2022-04-20 03:47:40 -0400
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"Group 9", "student_id"=>"1"}, "commit"=>"Update Team", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/teams_controller.rb:43:in `update'
+Redirected to http://localhost:3000/teams/1
+Completed 302 Found in 14ms (ActiveRecord: 0.7ms | Allocations: 3786)
+
+
+Started GET "/teams/1" for ::1 at 2022-04-20 03:47:40 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1892)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 127.2ms | Allocations: 9751)
+Completed 200 OK in 138ms (Views: 127.8ms | ActiveRecord: 1.1ms | Allocations: 11880)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:47:42 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.8ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 82.9ms | Allocations: 7751)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 1.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 122.5ms | Allocations: 15610)
+Completed 200 OK in 129ms (Views: 122.1ms | ActiveRecord: 2.6ms | Allocations: 17192)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:47:43 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 4.0ms | Allocations: 682)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 17.2ms | Allocations: 3495)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 38.6ms | Allocations: 11341)
+Completed 200 OK in 52ms (Views: 39.6ms | ActiveRecord: 0.8ms | Allocations: 13912)
+
+
+Started PATCH "/teams/1" for ::1 at 2022-04-20 03:47:45 -0400
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"Group 2", "student_id"=>""}, "commit"=>"Update Team", "id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" WHERE "students"."id" = ?[0m  [["id", nil]]
+  ↳ app/controllers/teams_controller.rb:43:in `update'
+Redirected to http://localhost:3000/teams/1
+Completed 302 Found in 15ms (ActiveRecord: 0.9ms | Allocations: 3724)
+
+
+Started GET "/teams/1" for ::1 at 2022-04-20 03:47:45 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1892)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 29.0ms | Allocations: 9751)
+Completed 200 OK in 36ms (Views: 28.6ms | ActiveRecord: 1.5ms | Allocations: 11879)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:47:47 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 33.8ms | Allocations: 7284)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 52.2ms | Allocations: 15766)
+Completed 200 OK in 62ms (Views: 52.3ms | ActiveRecord: 1.7ms | Allocations: 17379)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:49:01 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 2.5ms | Allocations: 1017)
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 15.9ms | Allocations: 7448)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 143)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 75)
+  Rendered layout layouts/application.html.erb (Duration: 37.3ms | Allocations: 15709)
+Completed 200 OK in 75ms (Views: 36.4ms | ActiveRecord: 5.8ms | Allocations: 30150)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:49:29 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 3.8ms | Allocations: 1114)
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 17.1ms | Allocations: 4388)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.5ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 1.7ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 61.6ms | Allocations: 13489)
+Completed 200 OK in 76ms (Views: 66.9ms | ActiveRecord: 0.7ms | Allocations: 16734)
+
+
+Started GET "/teams/1/edit?data%5Bconfirm%5D=Are+you+sure%3F&method=update" for ::1 at 2022-04-20 03:49:30 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"update", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 6.8ms | Allocations: 640)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 20.7ms | Allocations: 3363)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.8ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 11793)
+Completed 200 OK in 100ms (Views: 73.7ms | ActiveRecord: 0.9ms | Allocations: 14042)
+
+
+Started GET "/teams/1/edit?data%5Bconfirm%5D=Are+you+sure%3F&method=update" for ::1 at 2022-04-20 03:49:34 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"update", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 2.0ms | Allocations: 642)
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3365)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 73)
+  Rendered layout layouts/application.html.erb (Duration: 26.7ms | Allocations: 11419)
+Completed 200 OK in 35ms (Views: 27.3ms | ActiveRecord: 0.6ms | Allocations: 13543)
+
+
+Started GET "/teams/1" for ::1 at 2022-04-20 03:49:37 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 49.1ms | Allocations: 9838)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 40)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 126)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 64.9ms | Allocations: 17779)
+Completed 200 OK in 75ms (Views: 63.5ms | ActiveRecord: 2.6ms | Allocations: 20055)
+
+
+Started GET "/teams/1/edit?data%5Bconfirm%5D=Are+you+sure%3F&method=update" for ::1 at 2022-04-20 03:49:39 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"update", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 3.5ms | Allocations: 708)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 12.9ms | Allocations: 3444)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 1.8ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 2.9ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 44.9ms | Allocations: 11295)
+Completed 200 OK in 57ms (Views: 47.3ms | ActiveRecord: 0.8ms | Allocations: 13516)
+
+
+Started GET "/teams/1/edit?data%5Bconfirm%5D=Are+you+sure%3F&method=update" for ::1 at 2022-04-20 03:49:52 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "method"=>"update", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 8.1ms | Allocations: 1114)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 17.0ms | Allocations: 4264)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.6ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 2.0ms | Allocations: 201)
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 13371)
+Completed 200 OK in 72ms (Views: 58.1ms | ActiveRecord: 1.1ms | Allocations: 16494)
+
+
+Started GET "/teams/1?data%5Bconfirm%5D=Are+you+sure%3F" for ::1 at 2022-04-20 03:49:53 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 12.8ms | Allocations: 2254)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 10305)
+Completed 200 OK in 51ms (Views: 35.8ms | ActiveRecord: 1.2ms | Allocations: 13156)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:49:56 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (1.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 45.4ms | Allocations: 8037)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 72.5ms | Allocations: 15979)
+Completed 200 OK in 79ms (Views: 70.2ms | ActiveRecord: 3.1ms | Allocations: 17692)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:49:57 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 4.5ms | Allocations: 640)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 20.7ms | Allocations: 3213)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 45.9ms | Allocations: 11624)
+Completed 200 OK in 58ms (Views: 47.5ms | ActiveRecord: 1.3ms | Allocations: 13746)
+
+
+Started GET "/teams/1?data%5Bconfirm%5D=Are+you+sure%3F" for ::1 at 2022-04-20 03:49:58 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"data"=>{"confirm"=>"Are you sure?"}, "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mStudent Load (1.1ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1922)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 10522)
+Completed 200 OK in 50ms (Views: 34.7ms | ActiveRecord: 2.0ms | Allocations: 12646)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:50:40 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 45.8ms | Allocations: 7906)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.3ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 353)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 205)
+  Rendered layout layouts/application.html.erb (Duration: 84.9ms | Allocations: 17222)
+Completed 200 OK in 109ms (Views: 95.5ms | ActiveRecord: 2.3ms | Allocations: 20415)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:50:41 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (2.8ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 9.3ms | Allocations: 1037)
+  [1m[36mStudent Load (0.9ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 24.1ms | Allocations: 4204)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 12370)
+Completed 200 OK in 58ms (Views: 44.7ms | ActiveRecord: 4.0ms | Allocations: 14714)
+
+
+Started GET "/teams/1?student_id=1" for ::1 at 2022-04-20 03:50:42 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"student_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 18.0ms | Allocations: 2126)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 1.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 60.7ms | Allocations: 9991)
+Completed 200 OK in 99ms (Views: 62.7ms | ActiveRecord: 1.4ms | Allocations: 12822)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:50:44 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 47.0ms | Allocations: 7171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 1.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 1.1ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 71.3ms | Allocations: 15146)
+Completed 200 OK in 92ms (Views: 76.5ms | ActiveRecord: 1.7ms | Allocations: 17192)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:50:52 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 5.3ms | Allocations: 1109)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 21.9ms | Allocations: 4260)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.8ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 2.2ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 52.5ms | Allocations: 13578)
+Completed 200 OK in 76ms (Views: 59.2ms | ActiveRecord: 1.2ms | Allocations: 17252)
+
+
+Started GET "/teams?method=update&student_id=1" for ::1 at 2022-04-20 03:50:53 -0400
+Processing by TeamsController#index as HTML
+  Parameters: {"method"=>"update", "student_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (1.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 59.7ms | Allocations: 8093)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 83.4ms | Allocations: 15952)
+Completed 200 OK in 93ms (Views: 79.8ms | ActiveRecord: 5.3ms | Allocations: 17776)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:50:55 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 4.0ms | Allocations: 640)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 19.7ms | Allocations: 3139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.6ms | Allocations: 73)
+  Rendered layout layouts/application.html.erb (Duration: 55.9ms | Allocations: 11522)
+Completed 200 OK in 70ms (Views: 56.5ms | ActiveRecord: 1.2ms | Allocations: 13656)
+
+
+Started GET "/teams?method=update&student_id=1" for ::1 at 2022-04-20 03:51:09 -0400
+Processing by TeamsController#index as HTML
+  Parameters: {"method"=>"update", "student_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 47.8ms | Allocations: 7903)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.6ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 353)
+  Rendered layouts/_footer.html.erb (Duration: 1.5ms | Allocations: 199)
+  Rendered layout layouts/application.html.erb (Duration: 82.3ms | Allocations: 17213)
+Completed 200 OK in 111ms (Views: 97.7ms | ActiveRecord: 2.2ms | Allocations: 20390)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:51:11 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 9.6ms | Allocations: 1031)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 23.9ms | Allocations: 4205)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 73)
+  Rendered layout layouts/application.html.erb (Duration: 46.7ms | Allocations: 12370)
+Completed 200 OK in 58ms (Views: 47.5ms | ActiveRecord: 0.8ms | Allocations: 14714)
+
+
+Started GET "/teams/1?student_id=1" for ::1 at 2022-04-20 03:51:12 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"student_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 20.1ms | Allocations: 2585)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 58.2ms | Allocations: 10557)
+Completed 200 OK in 72ms (Views: 59.0ms | ActiveRecord: 1.1ms | Allocations: 12808)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:51:14 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 41.0ms | Allocations: 7644)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 1.5ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 62.8ms | Allocations: 15801)
+Completed 200 OK in 72ms (Views: 63.4ms | ActiveRecord: 1.6ms | Allocations: 17385)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:51:15 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 5.2ms | Allocations: 677)
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 18.7ms | Allocations: 3450)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 41.5ms | Allocations: 11599)
+Completed 200 OK in 51ms (Views: 42.8ms | ActiveRecord: 0.7ms | Allocations: 13721)
+
+
+Started GET "/teams/1?student_id=1" for ::1 at 2022-04-20 03:51:18 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"student_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 11.8ms | Allocations: 1918)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 38.5ms | Allocations: 9915)
+Completed 200 OK in 54ms (Views: 41.6ms | ActiveRecord: 1.2ms | Allocations: 12428)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 03:51:19 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 46.5ms | Allocations: 7738)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 70)
+  Rendered layout layouts/application.html.erb (Duration: 63.8ms | Allocations: 15600)
+Completed 200 OK in 73ms (Views: 62.3ms | ActiveRecord: 3.1ms | Allocations: 17181)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:51:20 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 3.3ms | Allocations: 640)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 17.4ms | Allocations: 3019)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 48.1ms | Allocations: 11415)
+Completed 200 OK in 57ms (Views: 48.9ms | ActiveRecord: 0.8ms | Allocations: 13536)
+
+
+Started PATCH "/teams/1" for ::1 at 2022-04-20 03:51:21 -0400
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"Group 9", "student_id"=>""}, "commit"=>"Update Team", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:126:in `set_team'
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.5ms | Allocations: 5439)
+
+
+  
+NameError (undefined local variable or method `param' for #<TeamsController:0x0000000001fdb0>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/teams_controller.rb:43:in `update'
+Started PATCH "/teams/1" for ::1 at 2022-04-20 03:52:10 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"Group 9", "student_id"=>""}, "commit"=>"Update Team", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 5.4ms | Allocations: 18844)
+
+
+  
+NameError (undefined local variable or method `param' for #<TeamsController:0x00000000022880>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/teams_controller.rb:43:in `update'
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:52:12 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 7.1ms | Allocations: 1302)
+  [1m[36mStudent Load (1.6ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 32.1ms | Allocations: 7756)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.6ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 360)
+  Rendered layouts/_footer.html.erb (Duration: 1.9ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 66.8ms | Allocations: 17062)
+Completed 200 OK in 90ms (Views: 69.9ms | ActiveRecord: 3.3ms | Allocations: 20368)
+
+
+Started GET "/teams/add?student_id=1" for ::1 at 2022-04-20 03:52:14 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"student_id"=>"1", "id"=>"add"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+Completed 404 Not Found in 10ms (ActiveRecord: 1.2ms | Allocations: 2346)
+>>>>>>> 800b2c6cd3e1e8053e6d0df343fd354871946306
 
 
   
 ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=add):
   
+<<<<<<< HEAD
 app/controllers/teams_controller.rb:123:in `set_team'
 Started GET "/teams/4/edit" for 127.0.0.1 at 2022-04-20 11:29:35 -0400
 Processing by TeamsController#edit as HTML
@@ -51207,5 +52679,560 @@ Processing by TeamsController#edit as HTML
   Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 50)
   Rendered layout layouts/application.html.erb (Duration: 158.3ms | Allocations: 10556)
 Completed 200 OK in 199ms (Views: 157.7ms | ActiveRecord: 4.8ms | Allocations: 12677)
+=======
+app/controllers/teams_controller.rb:124:in `set_team'
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:52:33 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 2.7ms | Allocations: 646)
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 15.3ms | Allocations: 2956)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 46.0ms | Allocations: 11003)
+Completed 200 OK in 59ms (Views: 46.5ms | ActiveRecord: 1.2ms | Allocations: 13137)
+
+
+Started GET "/teams/add?student_id=1" for ::1 at 2022-04-20 03:52:34 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"student_id"=>"1", "id"=>"add"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+Completed 404 Not Found in 18ms (ActiveRecord: 0.9ms | Allocations: 2259)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Team with 'id'=add):
+  
+app/controllers/teams_controller.rb:124:in `set_team'
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 03:59:55 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.6ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 14.9ms | Allocations: 1120)
+  [1m[36mStudent Load (1.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 35.0ms | Allocations: 3997)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 33.8ms | Allocations: 108)
+  Rendered layouts/_header.html.erb (Duration: 2.8ms | Allocations: 375)
+  Rendered layouts/_footer.html.erb (Duration: 2.4ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 136.1ms | Allocations: 13319)
+Completed 200 OK in 212ms (Views: 152.9ms | ActiveRecord: 7.9ms | Allocations: 17461)
+
+
+Started GET "/static_pages" for ::1 at 2022-04-20 04:02:27 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 566)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.9ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 3.0ms | Allocations: 389)
+  Rendered layouts/_footer.html.erb (Duration: 1.6ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 43.6ms | Allocations: 9776)
+Completed 200 OK in 56ms (Views: 48.8ms | ActiveRecord: 0.4ms | Allocations: 12540)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 04:02:28 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (1.8ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 67.8ms | Allocations: 10768)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 42)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 136)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 95.4ms | Allocations: 18761)
+Completed 200 OK in 106ms (Views: 95.5ms | ActiveRecord: 6.7ms | Allocations: 21244)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:02:30 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (2.9ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 4.4ms | Allocations: 1036)
+  [1m[36mStudent Load (1.7ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/edit.html.erb:6
+  Rendered teams/edit.html.erb within layouts/application (Duration: 22.1ms | Allocations: 3819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 73.4ms | Allocations: 12439)
+Completed 200 OK in 84ms (Views: 72.3ms | ActiveRecord: 4.8ms | Allocations: 14788)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:02:56 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:23
+  Rendered teams/_form.html.erb (Duration: 6.1ms | Allocations: 2096)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 11.4ms | Allocations: 4103)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.1ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.6ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 2.1ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 47.5ms | Allocations: 13204)
+Completed 200 OK in 61ms (Views: 51.8ms | ActiveRecord: 0.6ms | Allocations: 16298)
+
+
+Started PATCH "/teams/1" for ::1 at 2022-04-20 04:03:35 -0400
+Processing by TeamsController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "team"=>{"name"=>"Group 9"}, "commit"=>"Update Team", "id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.6ms | Allocations: 5483)
+
+
+  
+NameError (undefined local variable or method `param' for #<TeamsController:0x00000000023d20>
+Did you mean?  params
+               params=
+               @_params):
+  
+app/controllers/teams_controller.rb:43:in `update'
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:03:38 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:23
+  Rendered teams/_form.html.erb (Duration: 6.3ms | Allocations: 2098)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 15.1ms | Allocations: 4101)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.1ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.7ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 2.5ms | Allocations: 195)
+  Rendered layout layouts/application.html.erb (Duration: 51.9ms | Allocations: 13403)
+Completed 200 OK in 65ms (Views: 55.4ms | ActiveRecord: 0.7ms | Allocations: 16503)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:07:31 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (2.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 18.8ms | Allocations: 5417)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 25.5ms | Allocations: 5924)
+  Rendered layout layouts/application.html.erb (Duration: 27.2ms | Allocations: 5998)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 4.2ms | Allocations: 9172)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x00000000024388>):
+    19: 
+    20:   <div class="field">
+    21:     <%= form.label :student_email, "Select an email." %><br/>
+    22:     <%= f.select :student_email, @students.email  %>
+    23:   </div>
+    24: 
+    25:   <div class="actions">
+  
+app/views/teams/_form.html.erb:22
+app/views/teams/_form.html.erb:1
+app/views/teams/edit.html.erb:3
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:07:47 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 16.3ms | Allocations: 5417)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 19.2ms | Allocations: 5928)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 6002)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.6ms | Allocations: 9260)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x00000000024810>):
+    19: 
+    20:   <div class="field">
+    21:     <%= form.label :student_email, "Select an email." %><br/>
+    22:     <%= f.select :student_email, ["1"] %>
+    23:   </div>
+    24: 
+    25:   <div class="actions">
+  
+app/views/teams/_form.html.erb:22
+app/views/teams/_form.html.erb:1
+app/views/teams/edit.html.erb:3
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:08:31 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 10.3ms | Allocations: 5470)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 14.0ms | Allocations: 5978)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 6052)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.5ms | Allocations: 9310)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x00000000024cc0>):
+    19: 
+    20:   <div class="field">
+    21:     <%= form.label :student_email, "Select an email." %><br/>
+    22:     <%= f.select :role, [User.roles.keys[0], User.roles.keys[1]]  %>
+    23:     <select>
+    24:     <% @students.each do |student| %>
+    25:       <option><%= student.email %></option>
+  
+app/views/teams/_form.html.erb:22
+app/views/teams/_form.html.erb:1
+app/views/teams/edit.html.erb:3
+Started GET "/" for ::1 at 2022-04-20 04:08:46 -0400
+Processing by StaticPagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering static_pages/index.html.erb within layouts/application
+  Rendered static_pages/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 557)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.5ms | Allocations: 110)
+  Rendered layouts/_header.html.erb (Duration: 5.6ms | Allocations: 388)
+  Rendered layouts/_footer.html.erb (Duration: 1.9ms | Allocations: 174)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 9902)
+Completed 200 OK in 67ms (Views: 62.2ms | ActiveRecord: 0.2ms | Allocations: 12342)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 04:08:47 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.4ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 47.0ms | Allocations: 7565)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 41)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 136)
+  Rendered layouts/_footer.html.erb (Duration: 1.2ms | Allocations: 79)
+  Rendered layout layouts/application.html.erb (Duration: 73.6ms | Allocations: 16088)
+Completed 200 OK in 80ms (Views: 71.2ms | ActiveRecord: 3.4ms | Allocations: 17980)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:08:48 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  Rendered teams/_form.html.erb (Duration: 10.1ms | Allocations: 5063)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 11.3ms | Allocations: 5157)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 5225)
+Completed 500 Internal Server Error in 120ms (ActiveRecord: 0.5ms | Allocations: 7894)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x00000000025288>):
+    19: 
+    20:   <div class="field">
+    21:     <%= form.label :student_email, "Select an email." %><br/>
+    22:     <%= f.select :role, [User.roles.keys[0], User.roles.keys[1]]  %>
+    23:     <select>
+    24:     <% @students.each do |student| %>
+    25:       <option><%= student.email %></option>
+  
+app/views/teams/_form.html.erb:22
+app/views/teams/_form.html.erb:1
+app/views/teams/edit.html.erb:3
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:08:58 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:23
+  Rendered teams/_form.html.erb (Duration: 8.6ms | Allocations: 2096)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4030)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.8ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.2ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 2.6ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 13310)
+Completed 200 OK in 59ms (Views: 47.7ms | ActiveRecord: 0.8ms | Allocations: 16396)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:11:33 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (1.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:25
+  Rendered teams/_form.html.erb (Duration: 104.6ms | Allocations: 2174)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 179.9ms | Allocations: 4107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.9ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 4.4ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 2.1ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 363.6ms | Allocations: 13182)
+Completed 200 OK in 451ms (Views: 381.0ms | ActiveRecord: 2.6ms | Allocations: 16394)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:11:52 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (0.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:25
+  Rendered teams/_form.html.erb (Duration: 9.4ms | Allocations: 1510)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2989)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 49)
+  Rendered layout layouts/application.html.erb (Duration: 45.5ms | Allocations: 11018)
+Completed 200 OK in 75ms (Views: 46.0ms | ActiveRecord: 0.9ms | Allocations: 13267)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:11:54 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (0.7ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:23
+  Rendered teams/_form.html.erb (Duration: 13.4ms | Allocations: 2096)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 27.4ms | Allocations: 4035)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.8ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.9ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 5.4ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 89.1ms | Allocations: 13113)
+Completed 200 OK in 119ms (Views: 102.8ms | ActiveRecord: 1.5ms | Allocations: 16204)
+
+
+Started GET "/teams/1" for ::1 at 2022-04-20 04:12:05 -0400
+Processing by TeamsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/show.html.erb within layouts/application
+  [1m[36mStudent Load (0.6ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ? /* loading for inspect */ LIMIT ?[0m  [["team_id", 1], ["LIMIT", 11]]
+  ↳ app/views/teams/show.html.erb:9
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/show.html.erb:10
+  Rendered teams/show.html.erb within layouts/application (Duration: 20.6ms | Allocations: 2688)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.9ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 72)
+  Rendered layout layouts/application.html.erb (Duration: 49.7ms | Allocations: 10871)
+Completed 200 OK in 61ms (Views: 50.3ms | ActiveRecord: 1.5ms | Allocations: 13249)
+
+
+Started GET "/teams" for ::1 at 2022-04-20 04:12:07 -0400
+Processing by TeamsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering teams/index.html.erb within layouts/application
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams"[0m
+  ↳ app/views/teams/index.html.erb:14
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 1]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 2]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 3]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 4]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 5]]
+  ↳ app/views/teams/index.html.erb:23
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students" INNER JOIN "student_teams" ON "students"."id" = "student_teams"."student_id" WHERE "student_teams"."team_id" = ?[0m  [["team_id", 6]]
+  ↳ app/views/teams/index.html.erb:23
+  Rendered teams/index.html.erb within layouts/application (Duration: 43.1ms | Allocations: 8050)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 64.2ms | Allocations: 15909)
+Completed 200 OK in 71ms (Views: 63.1ms | ActiveRecord: 2.1ms | Allocations: 17621)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:12:09 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:23
+  Rendered teams/_form.html.erb (Duration: 6.4ms | Allocations: 1493)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 15.2ms | Allocations: 2972)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 38)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 125)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 67)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 11382)
+Completed 200 OK in 60ms (Views: 53.0ms | ActiveRecord: 0.7ms | Allocations: 13504)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:13:13 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.3ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (0.2ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:23
+  Rendered teams/_form.html.erb (Duration: 9.9ms | Allocations: 2180)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 15.2ms | Allocations: 4087)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.7ms | Allocations: 108)
+  Rendered layouts/_header.html.erb (Duration: 2.3ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 2.2ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 63.9ms | Allocations: 13368)
+Completed 200 OK in 82ms (Views: 71.0ms | ActiveRecord: 0.8ms | Allocations: 16461)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:13:24 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.2ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (1.5ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:23
+  Rendered teams/_form.html.erb (Duration: 19.8ms | Allocations: 2180)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 31.1ms | Allocations: 4084)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.6ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 2.4ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 4.7ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 87.0ms | Allocations: 13360)
+Completed 200 OK in 106ms (Views: 94.4ms | ActiveRecord: 2.0ms | Allocations: 16576)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:13:38 -0400
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (0.4ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (0.3ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:23
+  Rendered teams/_form.html.erb (Duration: 9.3ms | Allocations: 2180)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 18.4ms | Allocations: 4083)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.1ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 7.8ms | Allocations: 356)
+  Rendered layouts/_footer.html.erb (Duration: 2.6ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 131.1ms | Allocations: 13158)
+Completed 200 OK in 151ms (Views: 138.7ms | ActiveRecord: 1.1ms | Allocations: 16370)
+
+
+Started GET "/teams/1/edit" for ::1 at 2022-04-20 04:14:39 -0400
+DEPRECATION WARNING: Using a dynamic :controller segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+DEPRECATION WARNING: Using a dynamic :action segment in a route is deprecated and will be removed in Rails 7.0. (called from block in <main> at /Users/cztcffsni/Desktop/Project6_RubyOnRailsProject_Group-9/config/routes.rb:9)
+Processing by TeamsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  [1m[36mTeam Load (1.5ms)[0m  [1m[34mSELECT "teams".* FROM "teams" WHERE "teams"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/teams_controller.rb:124:in `set_team'
+  Rendering layout layouts/application.html.erb
+  Rendering teams/edit.html.erb within layouts/application
+  [1m[36mStudent Load (2.0ms)[0m  [1m[34mSELECT "students".* FROM "students"[0m
+  ↳ app/views/teams/_form.html.erb:29
+  Rendered teams/_form.html.erb (Duration: 331.7ms | Allocations: 5300)
+  Rendered teams/edit.html.erb within layouts/application (Duration: 356.4ms | Allocations: 7983)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.8ms | Allocations: 107)
+  Rendered layouts/_header.html.erb (Duration: 3.5ms | Allocations: 360)
+  Rendered layouts/_footer.html.erb (Duration: 2.5ms | Allocations: 172)
+  Rendered layout layouts/application.html.erb (Duration: 611.3ms | Allocations: 17251)
+Completed 200 OK in 920ms (Views: 609.9ms | ActiveRecord: 26.2ms | Allocations: 32469)
+>>>>>>> 800b2c6cd3e1e8053e6d0df343fd354871946306
 
 

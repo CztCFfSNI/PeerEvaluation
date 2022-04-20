@@ -9,8 +9,12 @@
         <td><%= student.Lname %></td>
         <td><%= student.email %></td>
         <td><%= student.id %></td>
+<<<<<<< HEAD
         <td><%= link_to 'Add', :controller =>'teams', :action => 'add', :id => @team.id, :student_id => student.id %>/td>
 
+=======
+        <td><%= link_to 'Add', {controller: "teams", action: :add, :student_id => student.id}%></td>
+>>>>>>> 800b2c6cd3e1e8053e6d0df343fd354871946306
       </tr>
     <% end %>
 </table>
