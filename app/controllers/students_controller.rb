@@ -13,6 +13,7 @@ class StudentsController < ApplicationController
   # GET /students/new
   def new
     @student = Student.new
+    @student.email = current_user.email
   end
 
   # GET /students/1/edit
@@ -21,6 +22,7 @@ class StudentsController < ApplicationController
 
   # POST /students or /students.json
   def create
+    if current_user.role == User.roles.keys[0]
       @student = Student.new(student_params)
 
       respond_to do |format|
@@ -32,6 +34,9 @@ class StudentsController < ApplicationController
           format.json { render json: @student.errors, status: :unprocessable_entity }
         end
       end
+    else
+      redirect_to '/students'
+    end
   end
 
   # PATCH/PUT /students/1 or /students/1.json
