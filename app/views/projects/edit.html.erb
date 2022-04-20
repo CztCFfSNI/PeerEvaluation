@@ -1,6 +1,16 @@
 <h1>Editing Project</h1>
 
-<%= render 'form', project: @project %>
+<%= render 'form', project: @project%>
+
+<table>
+<% @teams.each do |team| %>
+      <tr>
+        <td><%= team.name %></td>
+        <td><%= team.id %></td>
+        <td><%= link_to 'Add',controller: "project", action:"add", project_id: @project.id, team_id: team.id%>/td>
+      </tr>
+    <% end %>
+</table>
 
 <%= link_to 'Show', @project %> |
 

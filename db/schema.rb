@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_18_195500) do
+ActiveRecord::Schema.define(version: 2022_04_20_190026) do
+
+  create_table "project_teams", force: :cascade do |t|
+    t.integer "project_id", null: false
+    t.integer "team_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["project_id"], name: "index_project_teams_on_project_id"
+    t.index ["team_id"], name: "index_project_teams_on_team_id"
+  end
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
@@ -69,6 +78,8 @@ ActiveRecord::Schema.define(version: 2022_04_18_195500) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "project_teams", "projects"
+  add_foreign_key "project_teams", "teams"
   add_foreign_key "reviews", "projects"
   add_foreign_key "reviews", "students", column: "written_by_id"
   add_foreign_key "reviews", "students", column: "written_for_id"

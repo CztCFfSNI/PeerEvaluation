@@ -4,19 +4,24 @@ class ProjectsController < ApplicationController
   # GET /projects or /projects.json
   def index
     @projects = Project.all
+    @students = Student.all
+    @teams = Team.all
   end
 
   # GET /projects/1 or /projects/1.json
   def show
+    @teams = Team.all
   end
 
   # GET /projects/new
   def new
     @project = Project.new
+    @teams = Team.all
   end
 
   # GET /projects/1/edit
   def edit
+    @teams = Team.all
   end
 
   # POST /projects or /projects.json
@@ -32,6 +37,18 @@ class ProjectsController < ApplicationController
         format.json { render json: @project.errors, status: :unprocessable_entity }
       end
     end
+  end
+
+  # Function to add project to a team
+  def add
+    @project_teams = ProjectTeam.new(project_id: params[:project_id], team_id: params[:team_id])
+    @project_teams.save
+
+    respond_to do |format|
+      format.html { redirect_to projects_url, notice: "Team was successfully added" }
+      format.json { head :no_content }
+    end
+
   end
 
   # PATCH/PUT /projects/1 or /projects/1.json

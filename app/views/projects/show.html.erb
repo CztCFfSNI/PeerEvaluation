@@ -10,6 +10,15 @@
   <%= @project.desc %>
 </p>
 
+<p>
+  <strong>Teams Assigned:</strong>
+  <% @project.teams.each do |team|%>
+  <ul>
+  <li><%= team.name + "\n"%></li>
+  </ul>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_project_path(@project) %>
 
 <%
