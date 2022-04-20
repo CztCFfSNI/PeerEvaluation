@@ -62,8 +62,14 @@ class TeamsController < ApplicationController
   end
 
   def add
-    @student_teams = Student_Teams.new(params[:id], params[:student_id])
+    @student_teams = StudentTeam.new(team_id: params[:team_id], student_id: params[:student_id])
     @student_teams.save
+
+    respond_to do |format|
+      format.html { redirect_to teams_url, notice: "Team was successfully updated" }
+      format.json { head :no_content }
+    end
+
   end
 
   # Function to add students to a team (Sparsh)
@@ -120,7 +126,8 @@ class TeamsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_team
-      @team = Team.find(params[:id])
+      id = params[:team_id] || params[:id]
+      @team = Team.find(id)
     end
 
     # Only allow a list of trusted parameters through.

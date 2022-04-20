@@ -6,7 +6,6 @@
 
 <p>
   <strong>Students:</strong>
-  <%= @team.students.inspect %>
   <% @team.students.each do |student|%>
   <ul>
   <li><%= student.Fname + " " + student.Lname + "\n"%></li>

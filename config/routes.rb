@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :static_pages
   root 'static_pages#index'
   get '/:controller/:action', to: 'application'
+  get '/team/add', to: 'teams#add'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
