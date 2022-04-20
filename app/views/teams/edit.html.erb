@@ -2,6 +2,15 @@
 
 <%= render 'form', team: @team %>
 
+<p>
+  <strong>Students:</strong>
+<% @team.students.each do |student|%>
+  <ul>
+  <li><%= student.Fname %> <%= student.Lname %> | <%= student.email %></li>
+  </ul>
+  <% end %>
+</p>
+
   <table>
 <% @students.each do |student| %>
       <tr>
@@ -9,7 +18,11 @@
         <td><%= student.Lname %></td>
         <td><%= student.email %></td>
         <td><%= student.id %></td>
-        <td><%= link_to 'Add',controller: "team", action:"add", team_id: @team.id, student_id: student.id%>/td>
+        <%if !(@team.students.include? student)%>
+        <td><%= link_to 'Add',controller: "team", action:"add", team_id: @team.id, student_id: student.id%></td>
+        <%else%>
+        <td><%= link_to 'Remove',controller: "team", action:"remove", team_id: @team.id, student_id: student.id%></td>
+        <%end%>
       </tr>
     <% end %>
 </table>

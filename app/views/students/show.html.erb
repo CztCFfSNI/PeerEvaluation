@@ -17,7 +17,11 @@
 
 <p>
   <strong>Teams:</strong>
-  <%= @student.teams.inspect %>
+  <% @student.teams.each do |team|%>
+  <ul>
+  <li><%= team.name %></li>
+  </ul>
+  <% end %>
 </p>
 
 <%if @student.email == current_user.email%>
