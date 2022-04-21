@@ -6,10 +6,12 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
     if !current_user.admin?
       @student = Student.find_by(email: current_user.email)
-      @student_teams = StudentTeam.where(student_id: @student.id)
-      @teams = []
-      @student_teams.each do |st|
-        @teams << Team.find_by(id: st.team_id)
+      if !@student.nil?
+        @student_teams = StudentTeam.where(student_id: @student.id)
+        @teams = []
+        @student_teams.each do |st|
+          @teams << Team.find_by(id: st.team_id)
+        end
       end
     end
   end
@@ -23,10 +25,12 @@ class ReviewsController < ApplicationController
     @review = Review.new()
     if !current_user.admin?
       @student = Student.find_by(email: current_user.email)
-      @student_teams = StudentTeam.where(student_id: @student.id)
-      @teams = []
-      @student_teams.each do |st|
-        @teams << Team.find_by(id: st.team_id)
+      if !@student.nil?
+        @student_teams = StudentTeam.where(student_id: @student.id)
+        @teams = []
+        @student_teams.each do |st|
+          @teams << Team.find_by(id: st.team_id)
+        end
       end
     end
   end

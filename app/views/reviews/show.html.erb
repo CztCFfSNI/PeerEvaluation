@@ -1,15 +1,22 @@
 
    
 <p id="notice"><%= notice %></p>
-
+<% @review = Review.find_by(params[:id])%>
 <p>
   <strong>Projectno:</strong>
   <%= @review.project_id %>
 </p>
 
 <p>
-  <strong>Writing To:</strong>
-  <%= link_to 'Student', 'students/' %>
+  <strong>Written By:</strong>
+  <%student = Student.find_by(params[@review.written_by_id])%>
+  <%= student.Fname + " " + student.Lname %>
+</p>
+
+<p>
+  <strong>Written To:</strong>
+  <%student = Student.find_by(params[@review.written_for_id])%>
+  <%= student.Fname + " " + student.Lname %>
 </p>
 
 <p>
