@@ -67,7 +67,7 @@
     </tr>
 
 
-    <% @teams.each do |team| %>
+    <% me.teams.each do |team| %>
     <% team.students.each do |student| %>
     <% if !(teammates.include? student) && student.email != current_user.email %>
     <% teammates << student %>
