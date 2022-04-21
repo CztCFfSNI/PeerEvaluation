@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   skip_before_action :verify_authenticity_token
+  before_action :set_student, only: %i[ show update destroy ]
 
   # GET /reviews or /reviews.json
   def index
@@ -18,8 +19,6 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1 or /reviews/1.json
   def show
-    @student = Student.find_by(email: current_user.email)
-    @reviews = Review.where("written_for_id =?", @student.id)
   end
 
   # GET /reviews/new
@@ -39,19 +38,42 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1/edit
   def edit
+    if current_user.admin?
+      respond_to do |format|
+        format.html { redirect_to '/reviews', notice: "You have no authority to edit reviews." }
+      end
+    end
   end
 
   # POST /reviews or /reviews.json
   def create
-    @review = Review.new(review_params)
-    
-    respond_to do |format|
-      if @review.save
-        format.html { redirect_to review_url(@review), notice: "Review was successfully created." }
-      else
-        format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @review.errors, status: :unprocessable_entity }
+    if !current_user.admin?
+      @student = Student.find_by(email: current_user.email)
+      if !@student.nil?
+      p_id = []
+      @student.teams.each do |team|
+        team.projects.each do |project|
+          if !(p_id.include? project.id)
+            p_id << project.id
+          end
+        end
       end
+      @review = Review.new(review_params)
+      if p_id.include? @review.project_id
+        respond_to do |format|
+          if @review.save
+            format.html { redirect_to review_url(@review), notice: "Review was successfully created." }
+          else
+            format.html { render :new, status: :unprocessable_entity }
+            format.json { render json: @review.errors, status: :unprocessable_entity }
+          end
+        end
+      else
+        respond_to do |format|
+          format.html { redirect_to '/reviews', notice: "You can't give reviews to other projects!" }
+        end
+      end
+    end
     end
   end
 
@@ -59,7 +81,7 @@ class ReviewsController < ApplicationController
   def update
     respond_to do |format|
       if @review.update(review_params)
-        format.html { redirect_to review_url(@review), notice: "Review was successfully updated." }
+        format.html { redirect_to review_url(@review), notice: "Review was successfully updated!" }
         format.json { render :show, status: :ok, location: @review }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -70,11 +92,17 @@ class ReviewsController < ApplicationController
 
   # DELETE /reviews/1 or /reviews/1.json
   def destroy
-    @review.destroy
+    if current_user.admin?
+      respond_to do |format|
+        format.html { redirect_to '/reviews', notice: "You have no authority to edit reviews!" }
+      end
+    else
+      @review.destroy
 
-    respond_to do |format|
-      format.html { redirect_to reviews_url, notice: "Review was successfully destroyed." }
-      format.json { head :no_content }
+      respond_to do |format|
+        format.html { redirect_to reviews_url, notice: "Review was successfully destroyed." }
+        format.json { head :no_content }
+      end
     end
   end
 
@@ -83,6 +111,10 @@ class ReviewsController < ApplicationController
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_student
+      @review = Review.find(params[:id])
+    end
     # Only allow a list of trusted parameters through.
     def review_params
       params.require(:review).permit(:personalscore, :workscore, :comment, :written_by_id, :written_for_id, :project_id)
