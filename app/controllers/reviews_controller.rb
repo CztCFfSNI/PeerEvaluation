@@ -51,22 +51,17 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @student = Student.find_by(email: current_user.email)
-    if @student.id == @review.written_for_id
-      respond_to do |format|
-        if @review.save
-          format.html { redirect_to review_url(@review), notice: "Review was successfully created." }
-        else
-          format.html { render :new, status: :unprocessable_entity }
-          format.json { render json: @review.errors, status: :unprocessable_entity }
-        end
-      end
-    elsif !@student.nil?
-      check = Student.new
-      @student.teams.each do |team|
-        team.students.each do |student|
-          if student.id != current_user.id && student.id == @review.written_for_id
-            check = student
-            break
+    if !@student.nil?
+      if @student.id == @review.written_for_id
+        check = @student
+      else
+        check = Student.new
+        @student.teams.each do |team|
+          team.students.each do |student|
+            if student.id != current_user.id && student.id == @review.written_for_id
+              check = student
+              break
+            end
           end
         end
       end
