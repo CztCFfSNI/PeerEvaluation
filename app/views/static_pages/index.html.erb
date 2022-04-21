@@ -4,7 +4,7 @@
 <% if current_user.role == User.roles.keys[0] %>
  <%=Student.where("email = ?", current_user.email).pluck(:Fname).first%>
 <% else %>
-Professor
+Professor <%= current_user.email %>
 <% end %>
 ! Welcome to GoodPET<br>(Good Peer Evaluation Tool)</h1>
 <h2>
