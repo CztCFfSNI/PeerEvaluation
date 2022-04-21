@@ -13,7 +13,9 @@
       <th>Teamwork Score</th>
       <th>Work score</th>
       <th>Comment</th>
+      <% if current_user.role != User.roles.keys[1] %>
       <th>Details</th>
+      <%end%>
     </tr>
   </thead>
 
@@ -29,7 +31,9 @@
         <td><%= review.personalscore %></td>
         <td><%= review.workscore %></td>
         <td><%= review.comment %></td>
+        <% if current_user.role != User.roles.keys[1] %>
         <td><%= link_to 'Show', review %></td>
+        <%end%>
       </tr>
       <% end %>
     <% end %>

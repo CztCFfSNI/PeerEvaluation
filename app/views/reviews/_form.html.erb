@@ -13,16 +13,22 @@
 
   <div class="field">
     <%= form.label :"Enter the id of the project." %>
-    <p> Here are the projects you are currently assigned: </p>
+    <p><strong> Here are the projects you are currently assigned: </strong></p>
     <table>
+    <tr>
+      <td><strong>Project Name</strong></td>
+      <td><strong>Project id</strong></td>
+    </tr>
     <% projects = [] %>
     <% @student.teams.each do |team| %>
     <% team.projects.each do |project| %>
+    <% if !(projects.include? project) %>
     <% projects << project %>
       <tr>
         <td><%= project.name %></td>
         <td><%= project.id %></td>
       </tr>
+    <% end %>
     <% end %>
     <% end %>
     </table>
@@ -32,6 +38,12 @@
   <div class="field">
     <%= form.label :"Enter the id of the teammate you would like to leave a review for:"%>
     <table>
+    <tr>
+      <td><strong>Last Name</strong></td>
+      <td><strong>First Name</strong></td>
+      <td><strong>Email</strong></td>
+      <td><strong>Student id</strong></td>
+    </tr>
     <% teammates = [] %>
     <% @teams.each do |team| %>
     <% team.students.each do |student| %>
@@ -62,7 +74,7 @@
 
   <div class="field">
     <%= form.label :comment %>
-    <%= form.text_field :comment %>
+    <%= form.text_area :comment %>
   </div>
 
   <div class="actions">
