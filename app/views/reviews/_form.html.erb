@@ -12,12 +12,25 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :project_id %>
+    <%= form.label :"Enter the id of the project." %>
+    <p> Here are the projects you are currently assigned: </p>
+    <table>
+    <% projects = [] %>
+    <% @student.teams.each do |team| %>
+    <% team.projects.each do |project| %>
+    <% projects << project %>
+      <tr>
+        <td><%= project.name %></td>
+        <td><%= project.id %></td>
+      </tr>
+    <% end %>
+    <% end %>
+    </table>
     <%= form.number_field :project_id %>
   </div>
 
   <div class="field">
-    <%= form.label :written_for_id %>
+    <%= form.label :"Enter the id of the teammate you would like to leave a review for:"%>
     <table>
     <% teammates = [] %>
     <% @teams.each do |team| %>
