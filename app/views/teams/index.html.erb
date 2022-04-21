@@ -2,29 +2,34 @@
 
 <h1>Teams</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
+      <th>Team id</th>
       <th>Name</th>
-      <th colspan="3"></th>
+      <th>Team Members</th>
+      <th colspan="3">Details</th>
     </tr>
   </thead>
 
   <tbody>
     <% @teams.each do |team| %>
       <tr>
-        <td><%= team.name %></td>
         <td><%= team.id %></td>
-        <td><%= link_to 'Show', team %></td>
-        <td><%= link_to 'Edit', edit_team_path(team) %></td>
-        <td><%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-      <tr>
-      <td><% team.students.each do |student|%>
+        <td><%= team.name %></td>
+        <td>
+        <% team.students.each do |student|%>
             <ul>
-              <li><%= student.Fname + " " + student.Lname + "\n"%></li>
+              <li><% name = student.Fname + " " + student.Lname%>
+              <%= link_to name, Student.find_by(email: student.email) %>
+              </li>
             </ul>
-           <% end %></td>
+           <% end %>
+        </td>
+        <td><%= link_to 'Show', team %>
+        <%= link_to 'Edit', edit_team_path(team) %>
+        <%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>

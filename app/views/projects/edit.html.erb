@@ -2,14 +2,17 @@
 
 <%= render 'form', project: @project%>
 
+<br>
 <p>
-  <strong>Teams:</strong>
+  <h4><strong>Teams:</strong></h4>
 <% @project.teams.each do |team|%>
   <ul>
   <li><%= team.name %></li>
   </ul>
   <% end %>
 </p>
+<br>
+
 
 <table>
 <% @teams.each do |team| %>
@@ -23,6 +26,7 @@
       </tr>
     <% end %>
 </table>
+<br>
 
 <%= link_to 'Show', @project %> |
 <%= link_to 'Projects', projects_path %>

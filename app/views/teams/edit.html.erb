@@ -2,14 +2,16 @@
 
 <%= render 'form', team: @team %>
 
+<br>
 <p>
-  <strong>Students:</strong>
+  <h4><strong>Students:</strong></h4>
 <% @team.students.each do |student|%>
   <ul>
   <li><%= student.Fname %> <%= student.Lname %> | <%= student.email %></li>
   </ul>
   <% end %>
 </p>
+<br>
 
   <table>
 <% @students.each do |student| %>
@@ -26,6 +28,7 @@
       </tr>
     <% end %>
 </table>
+<br>
 
 <%= link_to 'Show', @team %> |
 <%= link_to 'Back', teams_path %>

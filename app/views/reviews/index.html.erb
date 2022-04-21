@@ -7,6 +7,7 @@
     <tr>
     <% if current_user.role == User.roles.keys[1]%>
       <th>written_for_id</th>
+      <th>written_for_name</th>
       <th>written_for_email</th>
       <%end%>
       <th>Project Number</th>
@@ -23,7 +24,11 @@
       <tr>
       <% if current_user.role == User.roles.keys[1]%>
         <td><%= review.written_for_id %></td>
-        <td><%= Student.find_by(id: review.written_for_id).email %></td>
+        <td>
+        <%student = Student.find_by(id: review.written_for_id)%>
+        <%= student.Fname + " " + student.Lname %>
+        </td>
+        <td><%= student.email %></td>
       <%end%>
         <td><%= review.project_id %></td>
         <td><%= review.personalscore %></td>
