@@ -58,8 +58,22 @@ class ReviewsController < ApplicationController
           end
         end
       end
+
+      student_teams = StudentTeam.where(student_id: @student.id)
+      teams, s_id = [], []
+      student_teams.each do |st|
+          teams << Team.find_by(id: st.team_id)
+      end
+      teams.each do |team| 
+        team.students.each do |student|
+          if !(s_id.include? student.id) && student.id != @student.id
+            s_id << student.id
+          end
+        end
+      end
+
       @review = Review.new(review_params)
-      if p_id.include? @review.project_id
+      if (p_id.include? @review.project_id) && (s_id.include? @review.written_for_id)
         respond_to do |format|
           if @review.save
             format.html { redirect_to review_url(@review), notice: "Review was successfully created." }
@@ -69,8 +83,15 @@ class ReviewsController < ApplicationController
           end
         end
       else
-        respond_to do |format|
-          format.html { redirect_to '/reviews', notice: "You can't give reviews to other projects!" }
+        if !(p_id.include? @review.project_id)
+          respond_to do |format|
+            format.html { redirect_to '/reviews', notice: "You can't give reviews to other projects!" }
+          end
+        end
+        if !(s_id.include? @review.written_for_id)
+          respond_to do |format|
+            format.html { redirect_to '/reviews', notice: "You can only give reviews to your teammates!" }
+          end
         end
       end
     end
