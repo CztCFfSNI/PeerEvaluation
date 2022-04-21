@@ -51,7 +51,22 @@
       <td><strong>Student id</strong></td>
       <td><strong>Teams Info</strong></td>
     </tr>
-    <% teammates = [] %>
+    <% teammates = [] 
+    me = Student.find_by(email: current_user.email)
+    %>
+    <tr>
+      <td><%= me.Fname %></td>
+      <td><%= me.Lname %></td>
+      <td><%= me.email %></td>
+      <td><%= me.id %></td>
+      <td>
+      <% me.teams.each do |t| %>
+      team_name: <%= t.name %>, team_id: <%= t.id %>  |
+      <% end %>
+       </td>
+    </tr>
+
+
     <% @teams.each do |team| %>
     <% team.students.each do |student| %>
     <% if !(teammates.include? student) && student.email != current_user.email %>
