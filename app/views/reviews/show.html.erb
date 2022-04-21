@@ -1,7 +1,8 @@
-
-   
 <p id="notice"><%= notice %></p>
-<% @review = Review.find_by(params[:id])%>
+<% @review = Review.find(params[:id])%>
+
+<%= @review.inspect %>
+
 <p>
   <strong>Projectno:</strong>
   <%= @review.project_id %>

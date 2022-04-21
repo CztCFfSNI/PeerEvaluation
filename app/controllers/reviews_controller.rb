@@ -18,6 +18,8 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/1 or /reviews/1.json
   def show
+    @student = Student.find_by(email: current_user.email)
+    @reviews = Review.where("written_for_id =?", @student.id)
   end
 
   # GET /reviews/new
