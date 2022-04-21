@@ -18,6 +18,22 @@
 
   <div class="field">
     <%= form.label :written_for_id %>
+    <table>
+    <% teammates = [] %>
+    <% @teams.each do |team| %>
+    <% team.students.each do |student| %>
+    <% if !(teammates.include? student) && student.email != current_user.email %>
+    <% teammates << student %>
+      <tr>
+        <td><%= student.Fname %></td>
+        <td><%= student.Lname %></td>
+        <td><%= student.email %></td>
+        <td><%= student.id %></td>
+      </tr>
+    <% end %>
+    <% end %>
+    <% end %>
+    </table>
     <%= form.number_field :written_for_id %>
   </div>
 
