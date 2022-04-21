@@ -18,6 +18,7 @@
     <tr>
       <td><strong>Project Name</strong></td>
       <td><strong>Project id</strong></td>
+      <td><strong>Assigned Teams</strong></td>
     </tr>
     <% projects = [] %>
     <% @student.teams.each do |team| %>
@@ -27,6 +28,11 @@
       <tr>
         <td><%= project.name %></td>
         <td><%= project.id %></td>
+        <td>
+        <% project.teams.each do |t| %>
+        team_name: <%= t.name %>, team_id: <%= t.id %>  |
+        <% end %>
+        </td>
       </tr>
     <% end %>
     <% end %>
@@ -43,6 +49,7 @@
       <td><strong>First Name</strong></td>
       <td><strong>Email</strong></td>
       <td><strong>Student id</strong></td>
+      <td><strong>Teams Info</strong></td>
     </tr>
     <% teammates = [] %>
     <% @teams.each do |team| %>
@@ -54,6 +61,11 @@
         <td><%= student.Lname %></td>
         <td><%= student.email %></td>
         <td><%= student.id %></td>
+        <td>
+        <% student.teams.each do |t| %>
+        team_name: <%= t.name %>, team_id: <%= t.id %>  |
+        <% end %>
+        </td>
       </tr>
     <% end %>
     <% end %>
