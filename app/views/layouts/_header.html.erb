@@ -3,11 +3,13 @@
 <%= link_to "GoodPET", static_pages_path, id: "logo" %>
 <nav>
 <ul class="nav navbar-nav navbar-right">
+<li><%= link_to "About Us", "https://docs.google.com/presentation/d/1CxEjYkrvY5vLyQvEOWeyerpJmUNsR-_vojjTn90u0-I/edit#slide=id.gc6fa3c898_0_0" %></li>
+<li><%= link_to "Help", "http://web.cse.ohio-state.edu/~giles.25/3901/labs/project6.html" %></li>
 <% if !user_signed_in? %>
-    <li><%= link_to "Help", '#' %></li>
     <li><%= link_to "Sign up/Log in", user_session_path %></li>
 <% else %>
     <li><%= link_to "Home", static_pages_path %></li>
+    <li><%= link_to "Profile", Student.find_by(email: current_user.email) %></li>
     <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
     <li><%= link_to "Account Setting", edit_user_registration_path %></li>
 <% end %>

@@ -19,7 +19,8 @@
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_project_path(@project) %>
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Projects', projects_path %>
 
 <%
  if current_user.role == User.roles.keys[0] 
