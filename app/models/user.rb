@@ -9,4 +9,6 @@ class User < ApplicationRecord
          def set_default_role
           self.role ||= :students
          end
+         validates :email, format: { with: /\A\S+@\S+.\S+\z/xi}
+         
 end
