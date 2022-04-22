@@ -11,34 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :"Here are the projects you are currently assigned:"%>
-    <br>
-    <table class="table">
-    <tr>
-      <td><strong>Project Name</strong></td>
-      <td><strong>Project id</strong></td>
-      <td><strong>Assigned Teams</strong></td>
-    </tr>
-    <% projects = [] %>
-    <% @student.teams.each do |team| %>
-    <% team.projects.each do |project| %>
-    <% if !(projects.include? project) %>
-    <% projects << project %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.id %></td>
-        <td>
-        <% project.teams.each do |t| %>
-        team_name: <%= t.name %>, team_id: <%= t.id %> <br>
-        <% end %>
-        </td>
-      </tr>
-    <% end %>
-    <% end %>
-    <% end %>
-    </table>
-    <%= form.number_field :project_id %>
+<% p_id = params[:project_id]
+project = Project.find_by(id: p_id)
+teammates = [] 
+me = Student.find_by(email: current_user.email)
+%>
+
+
+  <div class="field"><strong>You are currently assigned to Project <%= project.name %></strong>
+    <%= form.hidden_field :project_id, value: params[:project_id] %>
+  </div>
+
+  <div class="field"><strong>Written by <%= me.Fname + " " + me.Lname %></strong>
+    <%= form.hidden_field :written_by_id, value: me.id %>
   </div>
 
   <div class="field">
@@ -52,9 +37,6 @@
       <td><strong>Student id</strong></td>
       <td><strong>Teams Info</strong></td>
     </tr>
-    <% teammates = [] 
-    me = Student.find_by(email: current_user.email)
-    %>
     <tr>
       <td><%= me.Fname %></td>
       <td><%= me.Lname %></td>
@@ -69,6 +51,7 @@
 
 
     <% me.teams.each do |team| %>
+    <% if team.projects.include? project %>
     <% team.students.each do |student| %>
     <% if !(teammates.include? student) && student.email != current_user.email %>
     <% teammates << student %>
@@ -83,6 +66,7 @@
         <% end %>
         </td>
       </tr>
+    <% end %>
     <% end %>
     <% end %>
     <% end %>

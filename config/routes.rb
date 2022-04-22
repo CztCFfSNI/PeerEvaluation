@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/team/remove', to: 'teams#remove'
   get '/project/add', to: 'projects#add'
   get '/project/remove', to: 'projects#remove'
+  get '/review/new', to: 'reviews#new'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

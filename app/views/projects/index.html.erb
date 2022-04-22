@@ -36,7 +36,7 @@
         <%= link_to 'Edit', edit_project_path(project) %>
         <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% else %>
-        <%= link_to 'Give a review', new_review_path, @project %>
+        <%= link_to 'Give a review', :controller => "review", :action => "new", :project_id => project.id %>
         <% end %>
         </td>
       </tr>

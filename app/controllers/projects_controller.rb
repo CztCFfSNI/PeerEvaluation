@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: %i[ show edit update destroy ]
+  before_action :set_project, only: %i[ show edit update destroy choose ]
 
   # GET /projects or /projects.json
   def index
@@ -32,6 +32,10 @@ class ProjectsController < ApplicationController
   # GET /projects/1/edit
   def edit
     @teams = Team.all
+  end
+
+  def choose
+    
   end
 
   # POST /projects or /projects.json

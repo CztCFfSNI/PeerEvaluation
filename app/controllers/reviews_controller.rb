@@ -24,7 +24,7 @@ class ReviewsController < ApplicationController
   # GET /reviews/new
   def new
     @review = Review.new()
-    if !current_user.admin?
+    if !current_user.admin? && !params[:project_id].nil?
       @student = Student.find_by(email: current_user.email)
       if !@student.nil?
         @student_teams = StudentTeam.where(student_id: @student.id)
@@ -65,6 +65,7 @@ class ReviewsController < ApplicationController
           end
         end
       end
+
       p_id = []
       check.teams.each do |team|
         team.projects.each do |project|
