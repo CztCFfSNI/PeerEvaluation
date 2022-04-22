@@ -12,9 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :"Enter the id of the project." %>
-    <p><strong> Here are the projects you are currently assigned: </strong></p>
-    <table>
+    <%= form.label :"Here are the projects you are currently assigned:"%>
+    <br>
+    <table class="table">
     <tr>
       <td><strong>Project Name</strong></td>
       <td><strong>Project id</strong></td>
@@ -30,7 +30,7 @@
         <td><%= project.id %></td>
         <td>
         <% project.teams.each do |t| %>
-        team_name: <%= t.name %>, team_id: <%= t.id %>  |
+        team_name: <%= t.name %>, team_id: <%= t.id %> <br>
         <% end %>
         </td>
       </tr>
@@ -43,7 +43,8 @@
 
   <div class="field">
     <%= form.label :"Enter the id of the teammate you would like to leave a review for:"%>
-    <table>
+    <br>
+    <table class="table">
     <tr>
       <td><strong>Last Name</strong></td>
       <td><strong>First Name</strong></td>
@@ -61,7 +62,7 @@
       <td><%= me.id %></td>
       <td>
       <% me.teams.each do |t| %>
-      team_name: <%= t.name %>, team_id: <%= t.id %>  |
+      team_name: <%= t.name %>, team_id: <%= t.id %>  <br>
       <% end %>
        </td>
     </tr>
@@ -78,7 +79,7 @@
         <td><%= student.id %></td>
         <td>
         <% student.teams.each do |t| %>
-        team_name: <%= t.name %>, team_id: <%= t.id %>  |
+        team_name: <%= t.name %>, team_id: <%= t.id %>  <br>
         <% end %>
         </td>
       </tr>
