@@ -3,9 +3,19 @@ class ProjectsController < ApplicationController
 
   # GET /projects or /projects.json
   def index
-    @projects = Project.all
-    @students = Student.all
-    @teams = Team.all
+    if current_user.admin?
+      @projects = Project.all
+    else
+      @student = Student.find_by(email: current_user.email)
+      @projects = []
+      @student.teams.each do |team|
+        team.projects.each do |project|
+          if !(@projects.include? project)
+            @projects << project
+          end
+        end
+      end
+    end
   end
 
   # GET /projects/1 or /projects/1.json
