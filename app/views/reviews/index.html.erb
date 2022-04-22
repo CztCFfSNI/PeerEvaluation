@@ -49,8 +49,8 @@
 
 <br>
 
-<% if current_user.role == User.roles.keys[1] %>
-<%= link_to 'New Review', new_review_path %>
+<% if current_user.role == User.roles.keys[0] %>
+<%= link_to 'New Review', '/projects' %>
 <%end%>
 
 <%

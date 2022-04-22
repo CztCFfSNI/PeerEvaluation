@@ -34,10 +34,6 @@ class ProjectsController < ApplicationController
     @teams = Team.all
   end
 
-  def choose
-    
-  end
-
   # POST /projects or /projects.json
   def create
     @project = Project.new(project_params)
@@ -117,7 +113,8 @@ class ProjectsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_project
-      @project = Project.find(params[:id])
+      id = params[:project_id] || params[:id]
+      @project = Project.find(id)
     end
 
     # Only allow a list of trusted parameters through.

@@ -60,4 +60,6 @@ end
 </table>
 <br>
 
+<% if current_user.admin? %>
 <%= link_to 'New Team', new_team_path %>
+<% end %>
