@@ -18,8 +18,9 @@ me = Student.find_by(email: current_user.email)
 %>
 
 
-  <div class="field"><strong>You are currently assigned to Project <%= project.name %></strong>
-    <%= form.hidden_field :project_id, value: params[:project_id] %>
+  <div class="field"><strong>You are giving a new review for Project <%= project.name %></strong>
+    <%= form.hidden_field :project_id, value: params[:project_id] %><br><br>
+    <%= link_to 'Choose Another One?', '../projects'%>
   </div>
 
   <div class="field"><strong>Written by <%= me.Fname + " " + me.Lname %></strong>

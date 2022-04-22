@@ -4,7 +4,7 @@ class ReviewsController < ApplicationController
 
   # GET /reviews or /reviews.json
   def index
-    @reviews = Review.all
+      @reviews = Review.all
     if !current_user.admin?
       @student = Student.find_by(email: current_user.email)
       if !@student.nil?
@@ -85,7 +85,7 @@ class ReviewsController < ApplicationController
         end
       else
         respond_to do |format|
-          format.html { redirect_to '/reviews', notice: "You are not allowed to give reviews to students who are not in your team!!!" }
+          format.html { redirect_to '/projects', notice: "You are not allowed to give reviews to students who are not in your team!!!" }
         end
       end
     end
