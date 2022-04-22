@@ -24,7 +24,9 @@ end
       <th>Team id</th>
       <th>Name</th>
       <th>Team Members</th>
+      <% if current_user.admin? %>
       <th colspan="3">Details</th>
+      <% end %>
     </tr>
   </thead>
 
@@ -45,10 +47,12 @@ end
            <% end %>
         <% end %>
         </td>
+        <% if current_user.admin? %>
         <td><%= link_to 'Show', team %> |
         <%= link_to 'Edit', edit_team_path(team) %> |
         <%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
+        <% end %>
       </tr>
       <% end %>
     <% end %>
