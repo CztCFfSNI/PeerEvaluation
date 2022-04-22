@@ -32,8 +32,8 @@
         <% end %>
         <td>
         <% if current_user.admin? %>
-        <%= link_to 'Show', project %>
-        <%= link_to 'Edit', edit_project_path(project) %>
+        <%= link_to 'Show', project %> |
+        <%= link_to 'Edit', edit_project_path(project) %> |
         <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %>
         <% else %>
         <%= link_to 'Give a review', :controller => "review", :action => "new", :project_id => project.id %>

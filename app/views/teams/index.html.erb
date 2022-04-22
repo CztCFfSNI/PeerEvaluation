@@ -2,6 +2,22 @@
 
 <h1>Teams</h1>
 
+<%
+t_id = []
+if current_user.role == User.roles.keys[0]
+  if !Student.exists?(:email => current_user.email)
+    controller.redirect_to '/students/new'
+  else
+    s = Student.find_by(:email => current_user.email)
+    s.teams.each do |team|
+      if !t_id.include? team.id
+        t_id << team.id
+      end
+    end
+  end
+end
+%>
+
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -14,35 +30,30 @@
 
   <tbody>
     <% @teams.each do |team| %>
+    <% if current_user.role == User.roles.keys[1] || (t_id.include? team.id) %>
       <tr>
         <td><%= team.id %></td>
         <td><%= team.name %></td>
         <td>
         <% team.students.each do |student|%>
+          <% if current_user.role == User.roles.keys[1] || student.email != current_user.email %>
             <ul>
               <li><% name = student.Fname + " " + student.Lname%>
               <%= link_to name, Student.find_by(email: student.email) %>
               </li>
             </ul>
            <% end %>
+        <% end %>
         </td>
-        <td><%= link_to 'Show', team %>
-        <%= link_to 'Edit', edit_team_path(team) %>
+        <td><%= link_to 'Show', team %> |
+        <%= link_to 'Edit', edit_team_path(team) %> |
         <%= link_to 'Destroy', team, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
 <br>
 
 <%= link_to 'New Team', new_team_path %>
-
-<%
- if current_user.role == User.roles.keys[0] 
-  controller.redirect_to '/static_pages'
-  if !Student.exists?(:email => current_user.email)
-    controller.redirect_to '/students/new'
-  end
-end
-%>
