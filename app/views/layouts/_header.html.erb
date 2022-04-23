@@ -3,17 +3,43 @@
 <%= link_to "GoodPET", static_pages_path, id: "logo" %>
 <nav>
 <ul class="nav navbar-nav navbar-right">
+
+<% if !user_signed_in? %>
 <li><%= link_to "About Us", "https://docs.google.com/presentation/d/1CxEjYkrvY5vLyQvEOWeyerpJmUNsR-_vojjTn90u0-I/edit#slide=id.gc6fa3c898_0_0" %></li>
 <li><%= link_to "Help", "http://web.cse.ohio-state.edu/~giles.25/3901/labs/project6.html" %></li>
-<% if !user_signed_in? %>
     <li><%= link_to "Sign up/Log in", user_session_path %></li>
 <% else %>
-    <li><%= link_to "Home", static_pages_path %></li>
+
+    <%if current_page?('/') or current_page?('/static_pages')%>
+    <li><%= link_to "About Us", "https://docs.google.com/presentation/d/1CxEjYkrvY5vLyQvEOWeyerpJmUNsR-_vojjTn90u0-I/edit#slide=id.gc6fa3c898_0_0" %></li>
+    <li><%= link_to "Help", "http://web.cse.ohio-state.edu/~giles.25/3901/labs/project6.html" %></li>
     <%if !current_user.admin?%>
     <li><%= link_to "Profile", Student.find_by(email: current_user.email) %></li> 
     <%end%>
-    <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-    <li><%= link_to "Account Setting", edit_user_registration_path %></li>
+
+    <% else %>
+    <li><%= link_to "Home", static_pages_path %></li>
+
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Go To
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+        <%if !current_user.admin?%>
+            <li><%= link_to "Classmates", '../students' %></li>
+            <li><%= link_to "Teammates", '../teams' %></li>
+        <%else%>
+            <li><%= link_to "Students", '../students' %></li>
+            <li><%= link_to "Teams", '../teams' %></li>
+        <% end %>
+            <li><%= link_to "Projects", '../projects' %></li>
+            <li><%= link_to "Reviews", '../reviews' %></li>
+        </ul>
+    </li>
+
+    <% end %>
+<li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+<li><%= link_to "Account Setting", edit_user_registration_path %></li>
 <% end %>
 </ul>
 </nav>
