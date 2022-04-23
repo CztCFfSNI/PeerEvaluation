@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Teams</h1>
+<div class="col">
+  <div class="jumbotron">
+    <h1>Teams</h1>
+    <p>This is an ...</p>
+  </div></div>
 
 <%
 t_id = []
@@ -39,11 +43,8 @@ end
         <td>
         <% team.students.each do |student|%>
           <% if current_user.role == User.roles.keys[1] || student.email != current_user.email %>
-            <ul>
-              <li><% name = student.Fname + " " + student.Lname%>
-              <%= link_to name, Student.find_by(email: student.email) %>
-              </li>
-            </ul>
+          <% name = student.Fname + " " + student.Lname%>
+              <%= link_to name, Student.find_by(email: student.email) %><br>
            <% end %>
         <% end %>
         </td>

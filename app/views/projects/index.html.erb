@@ -1,6 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Projects</h1>
+<div class="col">
+  <div class="jumbotron">
+    <h1>Projects</h1>
+    <p>This is an ...</p>
+  </div></div>
+
+<br>
 
 <table class="table table-bordered">
   <thead>
@@ -22,12 +28,8 @@
         <% if current_user.admin? %>
         <td>
         <% project.teams.each do |team|%>
-            <ul>
-              <li>
-              <%= link_to team.name, Team.find_by(id: team.id) %>
-              </li>
-            </ul>
-           <% end %>
+           <%= link_to team.name, Team.find_by(id: team.id) %><br>
+        <% end %>
         </td>
         <% end %>
         <td>
