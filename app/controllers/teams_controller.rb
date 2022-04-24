@@ -53,6 +53,9 @@ class TeamsController < ApplicationController
   # DELETE /teams/1 or /teams/1.json
   def destroy
     @team.students.clear
+    @team.save
+    @team.projects.clear
+    @team.save
     @team.destroy
 
     respond_to do |format|

@@ -102,6 +102,9 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1 or /projects/1.json
   def destroy
     @project.teams.clear
+    @project.save
+    @project.reviews.clear
+    @project.save
     @project.destroy
 
     respond_to do |format|
