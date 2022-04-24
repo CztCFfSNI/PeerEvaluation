@@ -48,7 +48,8 @@
         <td><%= review.workscore %></td>
         <td><%= review.comment %></td>
         <td><%= link_to 'Show', review %>
-        <%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if current_user.role == User.roles.keys[1]%>
+        <%= link_to 'Destroy', review, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></td>
       </tr>
       <% end %>
     <% end %>
