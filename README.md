@@ -52,6 +52,8 @@ Information about the ERD, Database Tables, logic format, etc. can be found at t
 ## Testing
  
 Controllers and Models are tested.
+To run the Models test cases, type: "rails test:models" in the terminal.
+To run the Controllers test cases, type: "rails test:controllers" in the terminal.
 
 ## Controller Code Contributions
 Michael- Wrote review_controller.rb and application_controller.rb code for getting all reviews written for a specific student, based on current_user.email. This uses a select statement to find the student entity matching the user, and then another select statement to get the reviews with written_for_id equal to the id of this student.
