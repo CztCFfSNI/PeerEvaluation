@@ -1,4 +1,4 @@
-<h1>Editing Project</h1>
+<div class="container"><br><h1>Editing Project</h1>
 
 <%= render 'form', project: @project%>
 
@@ -15,7 +15,15 @@
 
 <%@teams = Team.all%>
 
-<table>
+<table class="table table-bordered border-primary table-info table-hover">
+
+<thead>
+    <tr>
+      <th>Team Name</th>
+      <th colspan="3">Details</th>
+    </tr>
+  </thead>
+
 <% @teams.each do |team| %>
       <tr>
         <td><%= team.name %></td>
@@ -39,4 +47,4 @@
     controller.redirect_to '/students/new'
   end
 end
-%>
+%></div>

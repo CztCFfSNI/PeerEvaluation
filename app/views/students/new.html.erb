@@ -1,10 +1,12 @@
+<div class="container">
+
 <h1>New Student</h1>
 
 <% if !current_user.admin? && !Student.exists?(:email => current_user.email) %>
 
 <%= render 'form', student: @student %>
 
-<%= link_to 'Back', students_path %>
 <% else %>
 <%controller.redirect_to '/students'%>
 <% end %>
+<div >

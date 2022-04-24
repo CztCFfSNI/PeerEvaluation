@@ -10,44 +10,43 @@
       </ul>
     </div>
   <% end %>
-
 <% p_id = params[:project_id]
 project = Project.find_by(id: p_id)
 teammates = [] 
 me = Student.find_by(email: current_user.email)
 %>
 
-
+<br>
   <div class="field"><strong>You are giving a new review for Project <%= project.name %></strong>
-    <%= form.hidden_field :project_id, value: params[:project_id] %><br><br>
+    <%= form.hidden_field :project_id, value: params[:project_id] %><br>
     <%= link_to 'Choose Another One?', '../projects'%>
   </div>
-
+<br>
   <div class="field"><strong>Written by <%= me.Fname + " " + me.Lname %></strong>
     <%= form.hidden_field :written_by_id, value: me.id %>
   </div>
-
+<br>
   <div class="field">
-    <%= form.label :"Enter the id of the teammate you would like to leave a review for:"%>
-    <br>
-    <table class="table">
+    <table class="table table-bordered border-primary table-info table-hover">
     <tr>
+      <td><strong>Student id</strong></td>
       <td><strong>Last Name</strong></td>
       <td><strong>First Name</strong></td>
       <td><strong>Email</strong></td>
-      <td><strong>Student id</strong></td>
-      <td><strong>Teams Info</strong></td>
+      
+      <!--<td><strong>Teams Info</strong></td>-->
     </tr>
     <tr>
+    <td><%= me.id %></td>
       <td><%= me.Fname %></td>
       <td><%= me.Lname %></td>
       <td><%= me.email %></td>
-      <td><%= me.id %></td>
-      <td>
+      
+      <!--<td>
       <% me.teams.each do |t| %>
       team_name: <%= t.name %>, team_id: <%= t.id %>  <br>
       <% end %>
-       </td>
+       </td>-->
     </tr>
 
 
@@ -57,39 +56,41 @@ me = Student.find_by(email: current_user.email)
     <% if !(teammates.include? student) && student.email != current_user.email %>
     <% teammates << student %>
       <tr>
+        <td><%= student.id %></td>
         <td><%= student.Fname %></td>
         <td><%= student.Lname %></td>
         <td><%= student.email %></td>
-        <td><%= student.id %></td>
+        <!--
         <td>
         <% student.teams.each do |t| %>
         team_name: <%= t.name %>, team_id: <%= t.id %>  <br>
         <% end %>
-        </td>
+        </td>>-->
       </tr>
     <% end %>
     <% end %>
     <% end %>
     <% end %>
     </table>
+    <%= form.label :"Enter the student id of the teammate you would like to leave a review for:"%>
     <%= form.number_field :written_for_id %>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :personalscore %>
     <%= form.number_field :personalscore %>
   </div>
-
+<br>
   <div class="field">
     <%= form.label :workscore %>
     <%= form.number_field :workscore %>
   </div>
-
+<br>
   <div class="field">
-    <%= form.label :comment %>
+    <%= form.label :comment %><br>
     <%= form.text_area :comment %>
   </div>
-
+<br>
   <div class="actions">
     <%= form.submit %>
   </div>

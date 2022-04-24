@@ -1,3 +1,76 @@
+<header class="p-1 bg-dark text-white">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
+          </a>
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li>
+            <%= link_to "GoodPET", static_pages_path, class:"nav-link px-2 text-white"%>
+            </li>
+</ul>
+          <div class="text-end">
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <% if !user_signed_in? %>
+        <li><%= link_to "About Us", "https://docs.google.com/presentation/d/1CxEjYkrvY5vLyQvEOWeyerpJmUNsR-_vojjTn90u0-I/edit#slide=id.gc6fa3c898_0_0", class:"nav-link px-2 text-white" %></li>
+    <li><%= link_to "Help", "http://web.cse.ohio-state.edu/~giles.25/3901/labs/project6.html", class:"nav-link px-2 text-white" %></li>
+<% else %>
+
+        <%if current_page?('/') or current_page?('/static_pages')%>
+    <li><%= link_to "About Us", "https://docs.google.com/presentation/d/1CxEjYkrvY5vLyQvEOWeyerpJmUNsR-_vojjTn90u0-I/edit#slide=id.gc6fa3c898_0_0", class:"nav-link px-2 text-white" %></li>
+    <li><%= link_to "Help", "http://web.cse.ohio-state.edu/~giles.25/3901/labs/project6.html", class:"nav-link px-2 text-white" %></li>
+<%if !current_user.admin?%>
+    <li><%= link_to "Profile", Student.find_by(email: current_user.email), class:"nav-link px-2 text-white" %></li> 
+    <%end%>
+    <% else %>
+    
+    <li><%= link_to "Home", static_pages_path, class:"nav-link px-2 text-white" %></li>
+
+<%if !current_user.admin?%>
+    <li><%= link_to "Profile", Student.find_by(email: current_user.email), class:"nav-link px-2 text-white" %></li> 
+    <%end%>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Go To
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+              <%if !current_user.admin?%>
+                <li><a class="dropdown-item" href="/students">Classmates</a></li>
+                <li><a class="dropdown-item" href="/teams">Teammates</a></li>
+                <%else%>
+                <li><a class="dropdown-item" href="/students">Students</a></li>
+                <li><a class="dropdown-item" href="/teams">Teams</a></li>
+                <% end %>
+                <li><a class="dropdown-item" href="/projects">Projects</a></li>
+                <li><a class="dropdown-item" href="/reviews">Reviews</a></li>
+            </ul>
+            </li>
+    <% end %>
+<% end %>
+
+          <% if user_signed_in? %>
+            <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class:"nav-link px-2 text-white" %></li>
+            <li><%= link_to "Account Setting", edit_user_registration_path, class:"nav-link px-2 text-white" %></li>
+          <% else %>
+            <li><%= link_to "Sign up/Log in", user_session_path, class:"nav-link px-2 text-white" %></li>
+          <% end %>
+          </ul>
+          </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+<!--
 <header class="navbar navbar-fixed-top navbar-inverse">
 <div class="container">
 <%= link_to "GoodPET", static_pages_path, id: "logo" %>
@@ -45,3 +118,4 @@
 </nav>
 </div>
 </header>
+-->

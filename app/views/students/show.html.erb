@@ -1,21 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Fname:</strong>
-  <%= @student.Fname %>
-</p>
+<div class="container">
 
-<p>
-  <strong>Lname:</strong>
-  <%= @student.Lname %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @student.email %>
-</p>
-
-<p>
+        <div class="mt-3 p-5 bg-primary text-white rounded">
+            <h1><%= @student.Fname %> <%= @student.Lname %></h1>
+    <p><%= @student.email %></p>
+    <p>
   <strong>Teams:</strong>
   <% @student.teams.each do |team|%>
   <ul>
@@ -23,12 +13,14 @@
   </ul>
   <% end %>
 </p>
-
 <%if @student.email == current_user.email%>
   <%= link_to 'Edit', edit_student_path(@student) %> |
-  <%= link_to 'Destroy', @student, method: :delete, data: { confirm: 'Are you sure?' } %> |
+  <%= link_to 'Destroy', @student, method: :delete, data: { confirm: 'Are you sure?' } %>
 <%end%>
-<%= link_to 'Students', students_path %>
+
+          </div>
+</div>
+
 
 <%
  if current_user.role == User.roles.keys[0] && !Student.exists?(:email => current_user.email)
