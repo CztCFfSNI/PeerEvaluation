@@ -39,18 +39,19 @@ class StudentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /students/1 or /students/1.json
   def update
     if current_user.role == User.roles.keys[0] && @student.email == current_user.email
       respond_to do |format|
         if @student.update(student_params)
-          format.html { redirect_to zd(@student), notice: "Student was successfully updated." }
+          format.html { redirect_to student_url(@student), notice: "Student was successfully updated." }
           format.json { render :show, status: :ok, location: @student }
         else
           format.html { render :edit, status: :unprocessable_entity }
           format.json { render json: @student.errors, status: :unprocessable_entity }
         end
       end
+    else
+      redirect_to '/students'
     end
   end
 
