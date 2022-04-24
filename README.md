@@ -43,7 +43,7 @@ Once the student is logged in, the student can go to any of the following pages:
 * View Reviews
    - under reviews, the student can view reviews that have been give to them and write a new review to other students in the team.
 * Check Projects
-   - under check projects, the student can view all the projects that have been assigned to them by the admin.
+   - under check projects, the student can view all the projects that have been assigned to them by the admin and write reviews to this project.
  
 ## More Info
  
