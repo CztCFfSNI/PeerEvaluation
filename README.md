@@ -29,7 +29,12 @@ Testing is currently still in development (beta dev)
 ## Controller Code Contributions
 Michael- Wrote review_controller.rb and application_controller.rb code for getting all reviews written for a specific student, based on current_user.email. This uses a select statement to find the student entity matching the user, and then another select statement to get the reviews with written_for_id equal to the id of this student.
 
-Zitao- Wrote application_controller.rb code for setting two different roles(students and admin) and asking users to sign up with a specific role before doing any other actions. Wrote students_controller.rb code for preventing students from entering pages without authority. Wrote some codes in views and now users' roles will determine the authority and the views you see.
+Zitao:
+application_controller.rb: wrote configure_permitted_parameters to get role when signing up a new student account.
+projects_controller.rb: wrote functions to add project to a team and remove teams from a project.
+reviews_controller.rb: wrote create functions to make sure
+students_controller.rb:
+teams_controller.rb:
 
 Sparsh - Wrote some code in teams_controller.rb to add and remove students from a team. The function iterates through user input (list of student emails) and pushes them to @team.students. Wrote some code to validate email addresses using regex. Also wrote some code to check if the person currently logged in is a student or not.
 
