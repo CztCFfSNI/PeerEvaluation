@@ -51,6 +51,7 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
     @student = Student.find_by(email: current_user.email)
+
     if !@student.nil?
       if @student.id == @review.written_for_id
         check = @student
@@ -106,18 +107,13 @@ class ReviewsController < ApplicationController
 
   # DELETE /reviews/1 or /reviews/1.json
   def destroy
-    if current_user.admin?
-      respond_to do |format|
-        format.html { redirect_to '/reviews', notice: "You have no authority to edit reviews!" }
-      end
-    else
+    
       @review.destroy
 
       respond_to do |format|
         format.html { redirect_to reviews_url, notice: "Review was successfully destroyed." }
         format.json { head :no_content }
       end
-    end
   end
 
   def get_my_reviews

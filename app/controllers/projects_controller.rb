@@ -103,7 +103,10 @@ class ProjectsController < ApplicationController
   def destroy
     @project.teams.clear
     @project.save
-    @project.reviews.clear
+    @reviews = Review.where("project_id =?", @project.id)
+      @reviews.each do |review|
+        review.destroy
+      end
     @project.save
     @project.destroy
 
