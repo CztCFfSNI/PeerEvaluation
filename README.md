@@ -25,7 +25,7 @@ Once the admin is logged in, the admin can go to any of the following pages:
    - the admin will be able to see all the students
 * Manage Teams
    - under manage team, the admin can look at students in the team by clicking on the Show button, or edit by adding or removing from a specific team by clicking on the Edit button, or delete a team by clicking the Destroy button.
-   - the admin can also make a new  by clicking on the New Team button at the bottom.
+   - the admin can also make a new team by clicking on the New Team button at the bottom.
 * View Reviews
    - under view reviews, the admin can look at all the reviews written by students to other students
 * Manage Projects
@@ -41,7 +41,7 @@ Once the student is logged in, the student can go to any of the following pages:
 * Check Teammates
    - the student can view all teams that they are part of, and the team members in the team
 * View Reviews
-   - under reviews, the student can view reviews that have been give to them and write a new review to otehr students in the team.
+   - under reviews, the student can view reviews that have been give to them and write a new review to other students in the team.
 * Check Projects
    - under check projects, the student can view all the projects that have been assigned to them by the admin.
  
@@ -63,6 +63,6 @@ reviews_controller.rb: wrote create functions to make sure
 students_controller.rb:
 teams_controller.rb:
 
-Sparsh - Wrote some code in teams_controller.rb to add and remove students from a team. The function iterates through user input (list of student emails) and pushes them to @team.students. Wrote some code to validate email addresses using regex. Also wrote some code to check if the person currently logged in is a student or not.
+Sparsh - Wrote some code in teams_controller.rb to add and remove students from a team. The function iterates through user input (list of student emails) and pushes them to @team.students. Wrote some code to validate email addresses using regex. Also wrote some code to check if the person currently logged in is a student or not. Wrote code to destroy teams/projects/students in their respective controllers. 
 
-Mohith- Wrote the test cases to test Models and the Controllers. Wrote some validations in the Models. Collaborated with Sprash to implement removing students from a team in the teams controller. Collaborated with Zitao to implement the student controller.
+Mohith- Wrote the test cases to test Models and the Controllers. Wrote some validations in the Models. Collaborated with Sparsh to implement removing students from a team in the teams controller. Collaborated with Zitao to implement the student controller.
