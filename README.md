@@ -1,6 +1,6 @@
 # Ruby on Rails Project - GoodPET (Good Peer Evaluation Tool)
 
-## Setup and Use
+## Getting Started
 
 Built on ruby version 3.0.1 and rails version 6.1.5 (More information on versions can be found in the Gemfile)
 
@@ -43,7 +43,7 @@ Once the student is logged in, the student can go to any of the following pages:
  
 ## More Info
  
-Information about the ERD, Database Tables, logic format, etc. can be found at the presentation link above.
+If you want more information about the ERD, Database Tables, logic format, etc., please feel free to contact the repo owner jerrychoiczt@gmail.com.
  
 ## Testing
  
