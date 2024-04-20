@@ -43,7 +43,9 @@ Once the student is logged in, the student can go to any of the following pages:
  
 ## More Info
  
-Information about the ERD, Database Tables, logic format, etc. can be found at the presentation link above.
+If you want more information about the ERD, Database Tables, logic format, etc., please feel free to contact the owner.
+
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:jerrychoiczt@gmail.com)
  
 ## Testing
  
